@@ -24,5 +24,10 @@ namespace UI
             f1.ShowDialog();
             this.Visible = true;
         }
+
+        private void guna2TextBox1_TextChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }

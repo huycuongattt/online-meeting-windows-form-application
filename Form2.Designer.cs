@@ -258,6 +258,7 @@
             this.guna2TextBox1.Size = new System.Drawing.Size(388, 48);
             this.guna2TextBox1.TabIndex = 34;
             this.guna2TextBox1.TextOffset = new System.Drawing.Point(32, 0);
+            this.guna2TextBox1.TextChanged += new System.EventHandler(this.guna2TextBox1_TextChanged);
             // 
             // label2
             // 

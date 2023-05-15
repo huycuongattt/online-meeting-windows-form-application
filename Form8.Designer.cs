@@ -92,7 +92,6 @@
             // 
             // guna2TextBox2
             // 
-            this.guna2TextBox2.BorderRadius = 3;
             this.guna2TextBox2.Cursor = System.Windows.Forms.Cursors.IBeam;
             this.guna2TextBox2.DefaultText = "";
             this.guna2TextBox2.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
@@ -335,7 +334,7 @@
             this.Controls.Add(this.panel3);
             this.Font = new System.Drawing.Font("Nirmala UI", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Name = "Form8";
-            this.Text = "Form8";
+            this.Text = "New meeting";
             this.Load += new System.EventHandler(this.Form8_Load);
             this.panel3.ResumeLayout(false);
             this.panel3.PerformLayout();

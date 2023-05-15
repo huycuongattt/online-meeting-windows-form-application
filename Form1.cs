@@ -40,5 +40,20 @@ namespace UI
         {
 
         }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            Form5 form5 = new Form5();
+            form5.ShowDialog();
+            //Form8 form8 = new Form8();
+            //form8.ShowDialog();
+            //Form4 form4 = new Form4();
+            //form4.ShowDialog();
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
     }
 }

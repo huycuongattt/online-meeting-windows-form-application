@@ -224,7 +224,7 @@
             this.Controls.Add(this.label1);
             this.Font = new System.Drawing.Font("Nirmala UI", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Name = "Form7";
-            this.Text = "Form7";
+            this.Text = "Join Meeting";
             this.ResumeLayout(false);
             this.PerformLayout();
 

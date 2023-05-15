@@ -10,16 +10,11 @@ using System.Windows.Forms;
 
 namespace UI
 {
-    public partial class Message : Form
+    public partial class Friends_Form5 : Form
     {
-        public Message()
+        public Friends_Form5()
         {
             InitializeComponent();
-        }
-
-        private void label1_Click(object sender, EventArgs e)
-        {
-
         }
     }
 }
