@@ -93,12 +93,13 @@
             this.guna2TextBox3.Location = new System.Drawing.Point(156, 362);
             this.guna2TextBox3.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.guna2TextBox3.Name = "guna2TextBox3";
-            this.guna2TextBox3.PasswordChar = '*';
-            this.guna2TextBox3.PlaceholderText = "";
+            this.guna2TextBox3.PasswordChar = '●';
+            this.guna2TextBox3.PlaceholderText = "Password again ...";
             this.guna2TextBox3.SelectedText = "";
             this.guna2TextBox3.Size = new System.Drawing.Size(388, 48);
             this.guna2TextBox3.TabIndex = 46;
             this.guna2TextBox3.TextOffset = new System.Drawing.Point(32, 0);
+            this.guna2TextBox3.UseSystemPasswordChar = true;
             // 
             // label6
             // 
@@ -174,6 +175,7 @@
             this.guna2Button1.Size = new System.Drawing.Size(180, 45);
             this.guna2Button1.TabIndex = 39;
             this.guna2Button1.Text = "SIGNUP";
+            this.guna2Button1.Click += new System.EventHandler(this.guna2Button1_Click);
             // 
             // guna2PictureBox3
             // 
@@ -205,12 +207,13 @@
             this.guna2TextBox2.Location = new System.Drawing.Point(156, 258);
             this.guna2TextBox2.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.guna2TextBox2.Name = "guna2TextBox2";
-            this.guna2TextBox2.PasswordChar = '*';
-            this.guna2TextBox2.PlaceholderText = "";
+            this.guna2TextBox2.PasswordChar = '●';
+            this.guna2TextBox2.PlaceholderText = "Enter password ...";
             this.guna2TextBox2.SelectedText = "";
             this.guna2TextBox2.Size = new System.Drawing.Size(388, 48);
             this.guna2TextBox2.TabIndex = 37;
             this.guna2TextBox2.TextOffset = new System.Drawing.Point(32, 0);
+            this.guna2TextBox2.UseSystemPasswordChar = true;
             // 
             // label3
             // 
@@ -253,7 +256,7 @@
             this.guna2TextBox1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.guna2TextBox1.Name = "guna2TextBox1";
             this.guna2TextBox1.PasswordChar = '\0';
-            this.guna2TextBox1.PlaceholderText = "";
+            this.guna2TextBox1.PlaceholderText = "Enter username ...";
             this.guna2TextBox1.SelectedText = "";
             this.guna2TextBox1.Size = new System.Drawing.Size(388, 48);
             this.guna2TextBox1.TabIndex = 34;
@@ -306,6 +309,7 @@
             this.Name = "Form2";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Form2";
+            this.Load += new System.EventHandler(this.Form2_Load);
             ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox2)).EndInit();
