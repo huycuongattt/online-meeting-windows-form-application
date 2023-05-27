@@ -99,15 +99,7 @@ namespace UI
                 MessageBox.Show("All fields must be filled!", "Warning", MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
 
-            /*var register = new Register
-            {
-                username = guna2TextBox1.Text,
-                passwd = guna2TextBox2.Text,
-                Gmail = "",
-                Location = "",
-                CompanyName = "",
-                Phone = ""
-            };*/
+            
             bool login = false;
             FirebaseResponse response = await client.GetAsync("Account/");
             Dictionary<string, Register> map = response.ResultAs<Dictionary<string, Register>>();
@@ -117,9 +109,9 @@ namespace UI
                 {
                     string username = get.Value.username;
                     string passwd = get.Value.passwd;
-                    if (guna2TextBox1.Text == username && guna2TextBox2.Text == passwd)
+                    if (guna2TextBox1.Text.Trim() == username && guna2TextBox2.Text.Trim() == passwd)
                     {
-                        MessageBox.Show("Welcome " + guna2TextBox1.Text + " !", "Notification", MessageBoxButtons.OK);
+                        MessageBox.Show("Welcome " + guna2TextBox1.Text.Trim() + " !", "Notification", MessageBoxButtons.OK);
                         login = true;
                         this.Hide();
                         Form5 f5 = new Form5();
@@ -163,7 +155,7 @@ namespace UI
                 {
                     string username = get.Value.username;
                     
-                    if (guna2TextBox1.Text == username)
+                    if (guna2TextBox1.Text.Trim() == username)
                     {
                         to = get.Value.Gmail; exist = true; break;
 
@@ -188,7 +180,7 @@ namespace UI
            
             from = "Onlinemeeting.Proj@gmail.com";
             apppass = "goqqvvjmxbezucoz";
-            msg = $"Your reset password code is: {randomcode}";
+            msg = $"Dear friend!\nYour reset password code is: {randomcode}";
             mail.To.Add(to);
             mail.From = new MailAddress(from);
             mail.Body = msg;
@@ -204,7 +196,7 @@ namespace UI
                 smtp.Send(mail);
                 MessageBox.Show("Code Sent Succesfully! Check your email to receive the code.");
                 this.Hide();
-                Form6 f6 = new Form6(guna2TextBox1.Text,randomcode);
+                Form6 f6 = new Form6(guna2TextBox1.Text.Trim(),randomcode);
                 f6.ShowDialog();
             }
             catch (Exception ex)

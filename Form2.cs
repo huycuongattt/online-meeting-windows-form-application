@@ -53,7 +53,7 @@ namespace UI
             }
             else
             {
-                if (!checkUsername(guna2TextBox1.Text))
+                if (!checkUsername(guna2TextBox1.Text.Trim()))
                 {
                     MessageBox.Show("Username has fulfill below requirements:\n1.Minimun 8 chars\n2.Contain a-z, A-Z\n3.Contain numbers: 0-9 or '_'(optional)\n", "Reminder", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                     return;
@@ -65,8 +65,8 @@ namespace UI
                 }
                 var register = new Register
                 {
-                    username = guna2TextBox1.Text,
-                    passwd = guna2TextBox2.Text,
+                    username = guna2TextBox1.Text.Trim(),
+                    passwd = guna2TextBox2.Text.Trim(),
                     // Gmail = "hnuynnhi@gmail.com",
                     Gmail = "",
                     Location ="",
@@ -81,7 +81,7 @@ namespace UI
                     {
                         string username = get.Value.username;
                         string passwd = get.Value.passwd;
-                        if (guna2TextBox1.Text == username)
+                        if (guna2TextBox1.Text.Trim() == username)
                         {
                             MessageBox.Show("Username has existed. Change another to register", "Notification", MessageBoxButtons.OK, MessageBoxIcon.Information);
                            
@@ -90,7 +90,7 @@ namespace UI
                         }
                     }
                     
-                    response = await client.SetAsync("Account/" + guna2TextBox1.Text, register);
+                    response = await client.SetAsync("Account/" + guna2TextBox1.Text.Trim(), register);
                     Register res = response.ResultAs<Register>();
                     MessageBox.Show("Register successfully!", "Notification", MessageBoxButtons.OK);
 
@@ -98,7 +98,7 @@ namespace UI
                 }
                 else
                 {
-                    response = await client.SetAsync("Account/" + guna2TextBox1.Text, register);
+                    response = await client.SetAsync("Account/" + guna2TextBox1.Text.Trim(), register);
                     Register res = response.ResultAs<Register>();
                     MessageBox.Show("Register successfully!", "Notification", MessageBoxButtons.OK);
                 }
