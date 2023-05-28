@@ -132,6 +132,7 @@
             this.guna2TextBox1.Size = new System.Drawing.Size(388, 48);
             this.guna2TextBox1.TabIndex = 3;
             this.guna2TextBox1.TextOffset = new System.Drawing.Point(32, 0);
+            this.guna2TextBox1.TextChanged += new System.EventHandler(this.guna2TextBox1_TextChanged);
             // 
             // guna2PictureBox2
             // 
