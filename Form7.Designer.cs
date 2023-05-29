@@ -75,6 +75,7 @@
             this.TextID.SelectedText = "";
             this.TextID.Size = new System.Drawing.Size(404, 46);
             this.TextID.TabIndex = 1;
+            this.TextID.TextChanged += new System.EventHandler(this.TextID_TextChanged);
             // 
             // TypeRoom
             // 
@@ -85,7 +86,7 @@
             this.TypeRoom.FillColor = System.Drawing.Color.Azure;
             this.TypeRoom.FocusedColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.TypeRoom.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.TypeRoom.Font = new System.Drawing.Font("Nirmala UI", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.TypeRoom.Font = new System.Drawing.Font("Nirmala UI", 13.8F, System.Drawing.FontStyle.Bold);
             this.TypeRoom.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(88)))), ((int)(((byte)(112)))));
             this.TypeRoom.ItemHeight = 30;
             this.TypeRoom.Items.AddRange(new object[] {
@@ -95,6 +96,7 @@
             this.TypeRoom.Name = "TypeRoom";
             this.TypeRoom.Size = new System.Drawing.Size(404, 36);
             this.TypeRoom.TabIndex = 3;
+            this.TypeRoom.SelectedIndexChanged += new System.EventHandler(this.TypeRoom_SelectedIndexChanged);
             // 
             // TextBoxPassword
             // 
@@ -109,7 +111,7 @@
             this.TextBoxPassword.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
             this.TextBoxPassword.FillColor = System.Drawing.Color.Azure;
             this.TextBoxPassword.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.TextBoxPassword.Font = new System.Drawing.Font("Nirmala UI", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.TextBoxPassword.Font = new System.Drawing.Font("Nirmala UI", 13.8F);
             this.TextBoxPassword.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.TextBoxPassword.Location = new System.Drawing.Point(39, 263);
             this.TextBoxPassword.Margin = new System.Windows.Forms.Padding(5, 6, 5, 6);
@@ -121,6 +123,7 @@
             this.TextBoxPassword.Size = new System.Drawing.Size(404, 46);
             this.TextBoxPassword.TabIndex = 4;
             this.TextBoxPassword.UseSystemPasswordChar = true;
+            this.TextBoxPassword.TextChanged += new System.EventHandler(this.TextBoxPassword_TextChanged);
             // 
             // BtnJoin
             // 
@@ -137,6 +140,7 @@
             this.BtnJoin.Size = new System.Drawing.Size(101, 38);
             this.BtnJoin.TabIndex = 25;
             this.BtnJoin.Text = "Join";
+            this.BtnJoin.Click += new System.EventHandler(this.BtnJoin_Click);
             // 
             // BtnCancel
             // 
@@ -154,6 +158,7 @@
             this.BtnCancel.Size = new System.Drawing.Size(101, 38);
             this.BtnCancel.TabIndex = 26;
             this.BtnCancel.Text = "Cancel";
+            this.BtnCancel.Click += new System.EventHandler(this.BtnCancel_Click);
             // 
             // checkBoxCamera
             // 
@@ -164,6 +169,7 @@
             this.checkBoxCamera.TabIndex = 28;
             this.checkBoxCamera.Text = "Turn off camera";
             this.checkBoxCamera.UseVisualStyleBackColor = true;
+            this.checkBoxCamera.CheckedChanged += new System.EventHandler(this.checkBoxCamera_CheckedChanged);
             // 
             // checkBoxMicro
             // 
@@ -174,6 +180,7 @@
             this.checkBoxMicro.TabIndex = 29;
             this.checkBoxMicro.Text = "Don\'t use microphone";
             this.checkBoxMicro.UseVisualStyleBackColor = true;
+            this.checkBoxMicro.CheckedChanged += new System.EventHandler(this.checkBoxMicro_CheckedChanged);
             // 
             // label2
             // 
@@ -225,6 +232,7 @@
             this.Font = new System.Drawing.Font("Nirmala UI", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Name = "Form7";
             this.Text = "Join Meeting";
+            this.Load += new System.EventHandler(this.Form7_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 

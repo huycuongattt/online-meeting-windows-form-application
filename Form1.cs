@@ -19,10 +19,13 @@ using System.Web.UI.WebControls;
 using System.Security.Cryptography;
 namespace UI
 {
+    
     public partial class Form1 : Form
     {
+        public string UserName = "";
         string randomcode;
         public static string to;
+
         public Form1()
         {
             InitializeComponent();
@@ -121,6 +124,7 @@ namespace UI
                     {
                         MessageBox.Show("Welcome " + guna2TextBox1.Text.Trim() + " !", "Notification", MessageBoxButtons.OK);
                         login = true;
+                        UserName = username;
                         this.Hide();
                         Form5 f5 = new Form5();
                         f5.ShowDialog();
@@ -213,6 +217,10 @@ namespace UI
             }
         }
 
+        private void guna2TextBox1_TextChanged(object sender, EventArgs e)
+        {
+            UserName = guna2TextBox1.Text;
+        }
     }
     
 }
