@@ -52,7 +52,7 @@
             this.panel4.ForeColor = System.Drawing.Color.Black;
             this.panel4.Location = new System.Drawing.Point(183, 0);
             this.panel4.Name = "panel4";
-            this.panel4.Size = new System.Drawing.Size(750, 28);
+            this.panel4.Size = new System.Drawing.Size(870, 28);
             this.panel4.TabIndex = 17;
             // 
             // label1
@@ -99,7 +99,7 @@
             this.pnl.Dock = System.Windows.Forms.DockStyle.Left;
             this.pnl.Location = new System.Drawing.Point(0, 0);
             this.pnl.Name = "pnl";
-            this.pnl.Size = new System.Drawing.Size(183, 530);
+            this.pnl.Size = new System.Drawing.Size(183, 587);
             this.pnl.TabIndex = 10;
             // 
             // btnHome
@@ -139,7 +139,7 @@
             this.btnSetting.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.btnSetting.Image = global::UI.Properties.Resources.reload;
             this.btnSetting.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.btnSetting.Location = new System.Drawing.Point(0, 488);
+            this.btnSetting.Location = new System.Drawing.Point(0, 545);
             this.btnSetting.Name = "btnSetting";
             this.btnSetting.Padding = new System.Windows.Forms.Padding(12, 0, 0, 0);
             this.btnSetting.RightToLeft = System.Windows.Forms.RightToLeft.No;
@@ -218,18 +218,19 @@
             // 
             // PnlFormLoader
             // 
-            this.PnlFormLoader.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.PnlFormLoader.Location = new System.Drawing.Point(183, 29);
+            this.PnlFormLoader.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.PnlFormLoader.Location = new System.Drawing.Point(183, 28);
             this.PnlFormLoader.Name = "PnlFormLoader";
-            this.PnlFormLoader.Size = new System.Drawing.Size(750, 501);
+            this.PnlFormLoader.Size = new System.Drawing.Size(870, 559);
             this.PnlFormLoader.TabIndex = 18;
+            this.PnlFormLoader.Paint += new System.Windows.Forms.PaintEventHandler(this.PnlFormLoader_Paint);
             // 
             // Form5
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 17F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Azure;
-            this.ClientSize = new System.Drawing.Size(933, 530);
+            this.ClientSize = new System.Drawing.Size(1053, 587);
             this.Controls.Add(this.PnlFormLoader);
             this.Controls.Add(this.panel4);
             this.Controls.Add(this.pnl);

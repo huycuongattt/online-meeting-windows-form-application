@@ -13,6 +13,8 @@ using System.Web;
 using System.Windows.Forms;
 using System.Text.RegularExpressions;
 
+using System.Security.Cryptography;
+
 namespace UI
 {
     public partial class Form2 : Form
@@ -45,6 +47,14 @@ namespace UI
         {
             return Regex.IsMatch(name, @"^(?=.*[a-z])(?=.*[A-Z])(?!.*[^a-zA-Z0-9_]).{8,}$");
         }
+        private string HashPassword(string password)
+        {
+            using (var sha256 = SHA256.Create())
+            {
+                byte[] hashedBytes = sha256.ComputeHash(Encoding.UTF8.GetBytes(password));
+                return BitConverter.ToString(hashedBytes).Replace("-", "").ToLower();
+            }
+        }
         private async void guna2Button1_Click(object sender, EventArgs e)
         {
             if (string.IsNullOrEmpty(guna2TextBox1.Text) || string.IsNullOrEmpty(guna2TextBox2.Text) || string.IsNullOrEmpty(guna2TextBox3.Text))
@@ -66,7 +76,7 @@ namespace UI
                 var register = new Register
                 {
                     username = guna2TextBox1.Text.Trim(),
-                    passwd = guna2TextBox2.Text.Trim(),
+                    passwd = HashPassword(guna2TextBox2.Text.Trim()),
                     // Gmail = "hnuynnhi@gmail.com",
                     Gmail = "",
                     Location ="",

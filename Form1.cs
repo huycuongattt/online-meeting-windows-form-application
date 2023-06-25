@@ -16,13 +16,16 @@ using System.Net;
 using System.Net.Mail;
 using System.Web.UI;
 using System.Web.UI.WebControls;
-
+using System.Security.Cryptography;
 namespace UI
 {
+    
     public partial class Form1 : Form
     {
+        public string UserName = "";
         string randomcode;
         public static string to;
+
         public Form1()
         {
             InitializeComponent();
@@ -91,7 +94,14 @@ namespace UI
         {
             Application.Exit();
         }
-
+        private string HashPassword(string password)
+        {
+            using (var sha256 = SHA256.Create())
+            {
+                byte[] hashedBytes = sha256.ComputeHash(Encoding.UTF8.GetBytes(password));
+                return BitConverter.ToString(hashedBytes).Replace("-", "").ToLower();
+            }
+        }
         private async void guna2Button1_Click(object sender, EventArgs e)
         {
             if (string.IsNullOrEmpty(guna2TextBox1.Text) || string.IsNullOrEmpty(guna2TextBox2.Text))
@@ -108,11 +118,13 @@ namespace UI
                 foreach (var get in map)
                 {
                     string username = get.Value.username;
-                    string passwd = get.Value.passwd;
-                    if (guna2TextBox1.Text.Trim() == username && guna2TextBox2.Text.Trim() == passwd)
+                    string password = get.Value.passwd;
+                    string hashedPassword = HashPassword(guna2TextBox2.Text.Trim()); 
+                    if (username == guna2TextBox1.Text.Trim() && hashedPassword == password)
                     {
                         MessageBox.Show("Welcome " + guna2TextBox1.Text.Trim() + " !", "Notification", MessageBoxButtons.OK);
                         login = true;
+                        UserName = username;
                         this.Hide();
                         Form5 f5 = new Form5();
                         f5.ShowDialog();
@@ -205,6 +217,10 @@ namespace UI
             }
         }
 
+        private void guna2TextBox1_TextChanged(object sender, EventArgs e)
+        {
+            UserName = guna2TextBox1.Text;
+        }
     }
     
 }

@@ -77,9 +77,9 @@
             this.guna2CirclePictureBox3 = new Guna.UI2.WinForms.Guna2CirclePictureBox();
             this.guna2CirclePictureBox2 = new Guna.UI2.WinForms.Guna2CirclePictureBox();
             this.guna2CirclePictureBox1 = new Guna.UI2.WinForms.Guna2CirclePictureBox();
-            this.axRDPViewer1 = new AxRDPCOMAPILib.AxRDPViewer();
             this.contextMenuStrip1 = new System.Windows.Forms.ContextMenuStrip(this.components);
             this.guna2DateTimePicker1 = new Guna.UI2.WinForms.Guna2DateTimePicker();
+            this.axRDPViewer1 = new AxRDPCOMAPILib.AxRDPViewer();
             this.guna2Panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox5)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox4)).BeginInit();
@@ -109,23 +109,24 @@
             // 
             // guna2Panel1
             // 
+            this.guna2Panel1.Anchor = System.Windows.Forms.AnchorStyles.Left;
             this.guna2Panel1.Controls.Add(this.guna2PictureBox5);
             this.guna2Panel1.Controls.Add(this.guna2PictureBox4);
             this.guna2Panel1.Controls.Add(this.guna2PictureBox3);
             this.guna2Panel1.Controls.Add(this.guna2PictureBox2);
             this.guna2Panel1.Controls.Add(this.guna2PictureBox1);
-            this.guna2Panel1.Dock = System.Windows.Forms.DockStyle.Left;
             this.guna2Panel1.Location = new System.Drawing.Point(0, 0);
             this.guna2Panel1.Name = "guna2Panel1";
-            this.guna2Panel1.Size = new System.Drawing.Size(86, 810);
+            this.guna2Panel1.Size = new System.Drawing.Size(65, 787);
             this.guna2Panel1.TabIndex = 0;
             // 
             // guna2PictureBox5
             // 
+            this.guna2PictureBox5.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.guna2PictureBox5.BackColor = System.Drawing.Color.Transparent;
             this.guna2PictureBox5.Image = ((System.Drawing.Image)(resources.GetObject("guna2PictureBox5.Image")));
             this.guna2PictureBox5.ImageRotate = 0F;
-            this.guna2PictureBox5.Location = new System.Drawing.Point(19, 749);
+            this.guna2PictureBox5.Location = new System.Drawing.Point(12, 731);
             this.guna2PictureBox5.Name = "guna2PictureBox5";
             this.guna2PictureBox5.Size = new System.Drawing.Size(45, 45);
             this.guna2PictureBox5.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -136,6 +137,7 @@
             // 
             // guna2PictureBox4
             // 
+            this.guna2PictureBox4.Anchor = System.Windows.Forms.AnchorStyles.Left;
             this.guna2PictureBox4.BackColor = System.Drawing.Color.Transparent;
             this.guna2PictureBox4.Image = ((System.Drawing.Image)(resources.GetObject("guna2PictureBox4.Image")));
             this.guna2PictureBox4.ImageRotate = 0F;
@@ -149,6 +151,7 @@
             // 
             // guna2PictureBox3
             // 
+            this.guna2PictureBox3.Anchor = System.Windows.Forms.AnchorStyles.Left;
             this.guna2PictureBox3.BackColor = System.Drawing.Color.Transparent;
             this.guna2PictureBox3.Image = ((System.Drawing.Image)(resources.GetObject("guna2PictureBox3.Image")));
             this.guna2PictureBox3.ImageRotate = 0F;
@@ -162,6 +165,7 @@
             // 
             // guna2PictureBox2
             // 
+            this.guna2PictureBox2.Anchor = System.Windows.Forms.AnchorStyles.Left;
             this.guna2PictureBox2.BackColor = System.Drawing.Color.Transparent;
             this.guna2PictureBox2.Image = ((System.Drawing.Image)(resources.GetObject("guna2PictureBox2.Image")));
             this.guna2PictureBox2.ImageRotate = 0F;
@@ -175,6 +179,7 @@
             // 
             // guna2PictureBox1
             // 
+            this.guna2PictureBox1.Anchor = System.Windows.Forms.AnchorStyles.Left;
             this.guna2PictureBox1.BackColor = System.Drawing.Color.Transparent;
             this.guna2PictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("guna2PictureBox1.Image")));
             this.guna2PictureBox1.ImageRotate = 0F;
@@ -198,13 +203,15 @@
             // 
             // guna2Separator1
             // 
-            this.guna2Separator1.Location = new System.Drawing.Point(107, 67);
+            this.guna2Separator1.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.guna2Separator1.Location = new System.Drawing.Point(107, 36);
             this.guna2Separator1.Name = "guna2Separator1";
             this.guna2Separator1.Size = new System.Drawing.Size(761, 12);
             this.guna2Separator1.TabIndex = 11;
             // 
             // guna2HtmlLabel1
             // 
+            this.guna2HtmlLabel1.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.guna2HtmlLabel1.BackColor = System.Drawing.Color.Transparent;
             this.guna2HtmlLabel1.Font = new System.Drawing.Font("Nirmala UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.guna2HtmlLabel1.ForeColor = System.Drawing.Color.LightSeaGreen;
@@ -216,10 +223,11 @@
             // 
             // guna2PictureBox6
             // 
+            this.guna2PictureBox6.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.guna2PictureBox6.BackColor = System.Drawing.Color.Transparent;
             this.guna2PictureBox6.Image = ((System.Drawing.Image)(resources.GetObject("guna2PictureBox6.Image")));
             this.guna2PictureBox6.ImageRotate = 0F;
-            this.guna2PictureBox6.Location = new System.Drawing.Point(731, 81);
+            this.guna2PictureBox6.Location = new System.Drawing.Point(730, 50);
             this.guna2PictureBox6.Name = "guna2PictureBox6";
             this.guna2PictureBox6.Size = new System.Drawing.Size(25, 25);
             this.guna2PictureBox6.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -229,10 +237,11 @@
             // 
             // guna2HtmlLabel2
             // 
+            this.guna2HtmlLabel2.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.guna2HtmlLabel2.BackColor = System.Drawing.Color.Transparent;
             this.guna2HtmlLabel2.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.guna2HtmlLabel2.ForeColor = System.Drawing.Color.LightSeaGreen;
-            this.guna2HtmlLabel2.Location = new System.Drawing.Point(762, 85);
+            this.guna2HtmlLabel2.Location = new System.Drawing.Point(761, 54);
             this.guna2HtmlLabel2.Name = "guna2HtmlLabel2";
             this.guna2HtmlLabel2.Size = new System.Drawing.Size(93, 18);
             this.guna2HtmlLabel2.TabIndex = 14;
@@ -240,10 +249,11 @@
             // 
             // guna2PictureBox7
             // 
+            this.guna2PictureBox7.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.guna2PictureBox7.BackColor = System.Drawing.Color.Transparent;
             this.guna2PictureBox7.Image = ((System.Drawing.Image)(resources.GetObject("guna2PictureBox7.Image")));
             this.guna2PictureBox7.ImageRotate = 0F;
-            this.guna2PictureBox7.Location = new System.Drawing.Point(122, 81);
+            this.guna2PictureBox7.Location = new System.Drawing.Point(121, 50);
             this.guna2PictureBox7.Name = "guna2PictureBox7";
             this.guna2PictureBox7.Size = new System.Drawing.Size(25, 25);
             this.guna2PictureBox7.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -253,10 +263,11 @@
             // 
             // guna2HtmlLabel3
             // 
+            this.guna2HtmlLabel3.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.guna2HtmlLabel3.BackColor = System.Drawing.Color.Transparent;
             this.guna2HtmlLabel3.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.guna2HtmlLabel3.ForeColor = System.Drawing.Color.LightSeaGreen;
-            this.guna2HtmlLabel3.Location = new System.Drawing.Point(153, 85);
+            this.guna2HtmlLabel3.Location = new System.Drawing.Point(152, 54);
             this.guna2HtmlLabel3.Name = "guna2HtmlLabel3";
             this.guna2HtmlLabel3.Size = new System.Drawing.Size(54, 18);
             this.guna2HtmlLabel3.TabIndex = 16;
@@ -264,6 +275,7 @@
             // 
             // guna2PictureBox8
             // 
+            this.guna2PictureBox8.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
             this.guna2PictureBox8.BackColor = System.Drawing.Color.Transparent;
             this.guna2PictureBox8.Image = ((System.Drawing.Image)(resources.GetObject("guna2PictureBox8.Image")));
             this.guna2PictureBox8.ImageRotate = 0F;
@@ -278,6 +290,7 @@
             // 
             // guna2PictureBox9
             // 
+            this.guna2PictureBox9.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
             this.guna2PictureBox9.BackColor = System.Drawing.Color.Transparent;
             this.guna2PictureBox9.Image = ((System.Drawing.Image)(resources.GetObject("guna2PictureBox9.Image")));
             this.guna2PictureBox9.ImageRotate = 0F;
@@ -291,6 +304,7 @@
             // 
             // guna2HtmlLabel4
             // 
+            this.guna2HtmlLabel4.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
             this.guna2HtmlLabel4.BackColor = System.Drawing.Color.Transparent;
             this.guna2HtmlLabel4.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.guna2HtmlLabel4.ForeColor = System.Drawing.Color.LightSeaGreen;
@@ -303,6 +317,7 @@
             // 
             // guna2HtmlLabel5
             // 
+            this.guna2HtmlLabel5.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
             this.guna2HtmlLabel5.BackColor = System.Drawing.Color.Transparent;
             this.guna2HtmlLabel5.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.guna2HtmlLabel5.ForeColor = System.Drawing.Color.LightSeaGreen;
@@ -315,6 +330,7 @@
             // 
             // guna2PictureBox10
             // 
+            this.guna2PictureBox10.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
             this.guna2PictureBox10.BackColor = System.Drawing.Color.Transparent;
             this.guna2PictureBox10.Image = ((System.Drawing.Image)(resources.GetObject("guna2PictureBox10.Image")));
             this.guna2PictureBox10.ImageRotate = 0F;
@@ -325,9 +341,11 @@
             this.guna2PictureBox10.TabIndex = 21;
             this.guna2PictureBox10.TabStop = false;
             this.guna2PictureBox10.UseTransparentBackground = true;
+            this.guna2PictureBox10.Click += new System.EventHandler(this.guna2PictureBox10_Click);
             // 
             // guna2HtmlLabel6
             // 
+            this.guna2HtmlLabel6.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
             this.guna2HtmlLabel6.BackColor = System.Drawing.Color.Transparent;
             this.guna2HtmlLabel6.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.guna2HtmlLabel6.ForeColor = System.Drawing.Color.LightSeaGreen;
@@ -340,6 +358,7 @@
             // 
             // guna2PictureBox11
             // 
+            this.guna2PictureBox11.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
             this.guna2PictureBox11.BackColor = System.Drawing.Color.Transparent;
             this.guna2PictureBox11.Image = ((System.Drawing.Image)(resources.GetObject("guna2PictureBox11.Image")));
             this.guna2PictureBox11.ImageRotate = 0F;
@@ -350,9 +369,11 @@
             this.guna2PictureBox11.TabIndex = 23;
             this.guna2PictureBox11.TabStop = false;
             this.guna2PictureBox11.UseTransparentBackground = true;
+            this.guna2PictureBox11.Click += new System.EventHandler(this.guna2PictureBox11_Click);
             // 
             // guna2HtmlLabel7
             // 
+            this.guna2HtmlLabel7.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
             this.guna2HtmlLabel7.BackColor = System.Drawing.Color.Transparent;
             this.guna2HtmlLabel7.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.guna2HtmlLabel7.ForeColor = System.Drawing.Color.LightSeaGreen;
@@ -365,6 +386,7 @@
             // 
             // guna2PictureBox12
             // 
+            this.guna2PictureBox12.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
             this.guna2PictureBox12.BackColor = System.Drawing.Color.Transparent;
             this.guna2PictureBox12.Image = ((System.Drawing.Image)(resources.GetObject("guna2PictureBox12.Image")));
             this.guna2PictureBox12.ImageRotate = 0F;
@@ -378,6 +400,7 @@
             // 
             // guna2HtmlLabel8
             // 
+            this.guna2HtmlLabel8.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
             this.guna2HtmlLabel8.BackColor = System.Drawing.Color.Transparent;
             this.guna2HtmlLabel8.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.guna2HtmlLabel8.ForeColor = System.Drawing.Color.LightSeaGreen;
@@ -397,6 +420,7 @@
             // 
             // guna2GroupBox1
             // 
+            this.guna2GroupBox1.Anchor = System.Windows.Forms.AnchorStyles.Right;
             this.guna2GroupBox1.BorderColor = System.Drawing.Color.White;
             this.guna2GroupBox1.BorderRadius = 10;
             this.guna2GroupBox1.Controls.Add(this.guna2HtmlLabel18);
@@ -423,9 +447,9 @@
             this.guna2GroupBox1.FillColor = System.Drawing.Color.WhiteSmoke;
             this.guna2GroupBox1.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.guna2GroupBox1.ForeColor = System.Drawing.Color.Azure;
-            this.guna2GroupBox1.Location = new System.Drawing.Point(890, 67);
+            this.guna2GroupBox1.Location = new System.Drawing.Point(918, 67);
             this.guna2GroupBox1.Name = "guna2GroupBox1";
-            this.guna2GroupBox1.Size = new System.Drawing.Size(307, 644);
+            this.guna2GroupBox1.Size = new System.Drawing.Size(279, 644);
             this.guna2GroupBox1.TabIndex = 27;
             this.guna2GroupBox1.Text = "Participants";
             this.guna2GroupBox1.Click += new System.EventHandler(this.guna2GroupBox1_Click);
@@ -670,16 +694,6 @@
             this.guna2CirclePictureBox1.TabIndex = 0;
             this.guna2CirclePictureBox1.TabStop = false;
             // 
-            // axRDPViewer1
-            // 
-            this.axRDPViewer1.Enabled = true;
-            this.axRDPViewer1.Location = new System.Drawing.Point(107, 127);
-            this.axRDPViewer1.Name = "axRDPViewer1";
-            this.axRDPViewer1.OcxState = ((System.Windows.Forms.AxHost.State)(resources.GetObject("axRDPViewer1.OcxState")));
-            this.axRDPViewer1.Size = new System.Drawing.Size(761, 559);
-            this.axRDPViewer1.TabIndex = 28;
-            this.axRDPViewer1.Enter += new System.EventHandler(this.axRDPViewer1_Enter);
-            // 
             // contextMenuStrip1
             // 
             this.contextMenuStrip1.ImageScalingSize = new System.Drawing.Size(20, 20);
@@ -688,25 +702,39 @@
             // 
             // guna2DateTimePicker1
             // 
+            this.guna2DateTimePicker1.Anchor = System.Windows.Forms.AnchorStyles.Right;
             this.guna2DateTimePicker1.BorderRadius = 10;
             this.guna2DateTimePicker1.Checked = true;
             this.guna2DateTimePicker1.FillColor = System.Drawing.Color.Teal;
             this.guna2DateTimePicker1.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.guna2DateTimePicker1.Format = System.Windows.Forms.DateTimePickerFormat.Long;
             this.guna2DateTimePicker1.Location = new System.Drawing.Point(997, 12);
-            this.guna2DateTimePicker1.MaxDate = new System.DateTime(9998, 12, 31, 0, 0, 0, 0);
-            this.guna2DateTimePicker1.MinDate = new System.DateTime(1753, 1, 1, 0, 0, 0, 0);
+            this.guna2DateTimePicker1.MaxDate = new System.DateTime(2250, 12, 31, 0, 0, 0, 0);
+            this.guna2DateTimePicker1.MinDate = new System.DateTime(2023, 6, 23, 0, 0, 0, 0);
             this.guna2DateTimePicker1.Name = "guna2DateTimePicker1";
             this.guna2DateTimePicker1.Size = new System.Drawing.Size(200, 36);
             this.guna2DateTimePicker1.TabIndex = 5;
-            this.guna2DateTimePicker1.Value = new System.DateTime(2023, 4, 2, 8, 48, 59, 932);
+            this.guna2DateTimePicker1.Value = new System.DateTime(2023, 6, 23, 0, 0, 0, 0);
+            // 
+            // axRDPViewer1
+            // 
+            this.axRDPViewer1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.axRDPViewer1.Enabled = true;
+            this.axRDPViewer1.Location = new System.Drawing.Point(71, 78);
+            this.axRDPViewer1.Name = "axRDPViewer1";
+            this.axRDPViewer1.OcxState = ((System.Windows.Forms.AxHost.State)(resources.GetObject("axRDPViewer1.OcxState")));
+            this.axRDPViewer1.Size = new System.Drawing.Size(604, 488);
+            this.axRDPViewer1.TabIndex = 28;
+            this.axRDPViewer1.Enter += new System.EventHandler(this.axRDPViewer1_Enter);
             // 
             // Form4
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Azure;
-            this.ClientSize = new System.Drawing.Size(1245, 810);
+            this.ClientSize = new System.Drawing.Size(1248, 787);
             this.Controls.Add(this.guna2DateTimePicker1);
             this.Controls.Add(this.axRDPViewer1);
             this.Controls.Add(this.guna2GroupBox1);
@@ -729,7 +757,7 @@
             this.Controls.Add(this.guna2Separator1);
             this.Controls.Add(this.guna2Panel1);
             this.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.Fixed3D;
             this.Name = "Form4";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Form4";

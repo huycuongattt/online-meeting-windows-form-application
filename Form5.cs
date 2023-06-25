@@ -132,6 +132,9 @@ namespace UI
             btnSetting.BackColor = Color.FromArgb(32, 178, 170);
         }
 
-       
+        private void PnlFormLoader_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
     }
 }

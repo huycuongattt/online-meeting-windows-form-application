@@ -80,6 +80,7 @@
             this.BtnSave.Size = new System.Drawing.Size(73, 39);
             this.BtnSave.TabIndex = 36;
             this.BtnSave.Text = "Save";
+            this.BtnSave.Click += new System.EventHandler(this.BtnSave_Click);
             // 
             // guna2TextBox5
             // 
@@ -285,6 +286,7 @@
             this.TextUserName.SelectedText = "";
             this.TextUserName.Size = new System.Drawing.Size(363, 30);
             this.TextUserName.TabIndex = 2;
+            this.TextUserName.TextChanged += new System.EventHandler(this.TextUserName_TextChanged);
             // 
             // label3
             // 
@@ -328,6 +330,7 @@
             this.Font = new System.Drawing.Font("Nirmala UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Name = "Profile_Form5";
             this.Text = "Profile_Form5";
+            this.Load += new System.EventHandler(this.Profile_Form5_Load);
             ((System.ComponentModel.ISupportInitialize)(this.avatar)).EndInit();
             this.panel3.ResumeLayout(false);
             this.panel3.PerformLayout();
