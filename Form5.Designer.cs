@@ -47,8 +47,10 @@
             // 
             // panel4
             // 
+            this.panel4.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.panel4.BackColor = System.Drawing.Color.LightSeaGreen;
-            this.panel4.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel4.ForeColor = System.Drawing.Color.Black;
             this.panel4.Location = new System.Drawing.Point(183, 0);
             this.panel4.Name = "panel4";
@@ -68,9 +70,11 @@
             // 
             // panel2
             // 
+            this.panel2.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.panel2.Controls.Add(this.label1);
             this.panel2.Controls.Add(this.pictureBox1);
-            this.panel2.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel2.Location = new System.Drawing.Point(0, 0);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(183, 144);
@@ -88,6 +92,9 @@
             // 
             // pnl
             // 
+            this.pnl.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.pnl.BackColor = System.Drawing.Color.LightSeaGreen;
             this.pnl.Controls.Add(this.btnHome);
             this.pnl.Controls.Add(this.pnlNav);
@@ -96,7 +103,6 @@
             this.pnl.Controls.Add(this.btnFriends);
             this.pnl.Controls.Add(this.btnProfile);
             this.pnl.Controls.Add(this.panel2);
-            this.pnl.Dock = System.Windows.Forms.DockStyle.Left;
             this.pnl.Location = new System.Drawing.Point(0, 0);
             this.pnl.Name = "pnl";
             this.pnl.Size = new System.Drawing.Size(183, 530);
@@ -218,7 +224,9 @@
             // 
             // PnlFormLoader
             // 
-            this.PnlFormLoader.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.PnlFormLoader.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.PnlFormLoader.Location = new System.Drawing.Point(183, 29);
             this.PnlFormLoader.Name = "PnlFormLoader";
             this.PnlFormLoader.Size = new System.Drawing.Size(750, 501);
@@ -228,6 +236,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 17F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.AutoSize = true;
             this.BackColor = System.Drawing.Color.Azure;
             this.ClientSize = new System.Drawing.Size(933, 530);
             this.Controls.Add(this.PnlFormLoader);

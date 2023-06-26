@@ -8,6 +8,7 @@ using System.ComponentModel;
 using System.Data;
 using System.Drawing;
 using System.Linq;
+using System.Security.Cryptography;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
@@ -40,7 +41,14 @@ namespace UI
         {
 
         }
-
+        private string HashPassword(string password)
+        {
+            using (var sha256 = SHA256.Create())
+            {
+                byte[] hashedBytes = sha256.ComputeHash(Encoding.UTF8.GetBytes(password));
+                return BitConverter.ToString(hashedBytes).Replace("-", "").ToLower();
+            }
+        }
         private async void BtnJoin_Click(object sender, EventArgs e)
         {
             if (string.IsNullOrEmpty(TextID.Text))
@@ -80,8 +88,8 @@ namespace UI
                                 Enter_Room attend = response2.ResultAs<Enter_Room>();
                                 MessageBox.Show("Join room successfully!", "Notification", MessageBoxButtons.OK);
                                 this.Hide();
-                                Form3 f3 = new Form3();
-                                f3.ShowDialog();
+                                Form4 f4 = new Form4();
+                                f4.ShowDialog();
 
                             }
                         }
@@ -117,7 +125,7 @@ namespace UI
                             {
                                 string ID_Room = get.Value.ID_Room;
                                 string Pass_room = get.Value.Pass_Room;
-                                if (TextID.Text.Trim() == ID_Room && TextBoxPassword.Text.Trim() == Pass_room)
+                                if (TextID.Text.Trim() == ID_Room && HashPassword(TextBoxPassword.Text.Trim()) == Pass_room)
                                 {
                                     enter2 = true;
                                     var form1 = (Form1)Application.OpenForms["Form1"];
@@ -137,8 +145,8 @@ namespace UI
                                     Enter_Room attend = response2.ResultAs<Enter_Room>();
                                     MessageBox.Show("Join room successfully!", "Notification", MessageBoxButtons.OK);
                                     this.Hide();
-                                    Form5 f5 = new Form5();
-                                    f5.ShowDialog();
+                                    Form4 f4 = new Form4();
+                                    f4.ShowDialog();
                                 }
 
                             }

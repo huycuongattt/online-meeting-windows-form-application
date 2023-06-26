@@ -28,42 +28,43 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.BtnCancel = new Guna.UI2.WinForms.Guna2Button();
+            this.BtnEdit = new Guna.UI2.WinForms.Guna2Button();
             this.BtnSave = new Guna.UI2.WinForms.Guna2Button();
-            this.guna2TextBox5 = new Guna.UI2.WinForms.Guna2TextBox();
-            this.guna2TextBox4 = new Guna.UI2.WinForms.Guna2TextBox();
-            this.guna2TextBox3 = new Guna.UI2.WinForms.Guna2TextBox();
-            this.guna2TextBox2 = new Guna.UI2.WinForms.Guna2TextBox();
+            this.TextBoxPhone = new Guna.UI2.WinForms.Guna2TextBox();
+            this.TextBoxCompany = new Guna.UI2.WinForms.Guna2TextBox();
+            this.TextBoxLocation = new Guna.UI2.WinForms.Guna2TextBox();
+            this.TextBoxGmail = new Guna.UI2.WinForms.Guna2TextBox();
             this.avatar = new System.Windows.Forms.PictureBox();
             this.label7 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
-            this.panel3 = new System.Windows.Forms.Panel();
-            this.guna2TextBox1 = new Guna.UI2.WinForms.Guna2TextBox();
-            this.TextUserName = new Guna.UI2.WinForms.Guna2TextBox();
-            this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
+            this.label3 = new System.Windows.Forms.Label();
+            this.TextUserName = new Guna.UI2.WinForms.Guna2TextBox();
+            this.TextBoxPassword = new Guna.UI2.WinForms.Guna2TextBox();
+            this.panel3 = new System.Windows.Forms.Panel();
             ((System.ComponentModel.ISupportInitialize)(this.avatar)).BeginInit();
             this.panel3.SuspendLayout();
             this.SuspendLayout();
             // 
-            // BtnCancel
+            // BtnEdit
             // 
-            this.BtnCancel.BorderRadius = 5;
-            this.BtnCancel.BorderThickness = 1;
-            this.BtnCancel.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.BtnCancel.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.BtnCancel.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.BtnCancel.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.BtnCancel.FillColor = System.Drawing.Color.Azure;
-            this.BtnCancel.Font = new System.Drawing.Font("Nirmala UI", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.BtnCancel.ForeColor = System.Drawing.Color.Black;
-            this.BtnCancel.Location = new System.Drawing.Point(377, 440);
-            this.BtnCancel.Name = "BtnCancel";
-            this.BtnCancel.Size = new System.Drawing.Size(101, 38);
-            this.BtnCancel.TabIndex = 37;
-            this.BtnCancel.Text = "Cancel";
+            this.BtnEdit.BorderRadius = 5;
+            this.BtnEdit.BorderThickness = 1;
+            this.BtnEdit.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.BtnEdit.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.BtnEdit.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.BtnEdit.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.BtnEdit.FillColor = System.Drawing.Color.Azure;
+            this.BtnEdit.Font = new System.Drawing.Font("Nirmala UI", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.BtnEdit.ForeColor = System.Drawing.Color.Black;
+            this.BtnEdit.Location = new System.Drawing.Point(377, 440);
+            this.BtnEdit.Name = "BtnEdit";
+            this.BtnEdit.Size = new System.Drawing.Size(101, 38);
+            this.BtnEdit.TabIndex = 37;
+            this.BtnEdit.Text = "Edit";
+            this.BtnEdit.Click += new System.EventHandler(this.BtnEdit_Click);
             // 
             // BtnSave
             // 
@@ -82,97 +83,97 @@
             this.BtnSave.Text = "Save";
             this.BtnSave.Click += new System.EventHandler(this.BtnSave_Click);
             // 
-            // guna2TextBox5
+            // TextBoxPhone
             // 
-            this.guna2TextBox5.BackColor = System.Drawing.Color.Azure;
-            this.guna2TextBox5.BorderRadius = 5;
-            this.guna2TextBox5.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.guna2TextBox5.DefaultText = "";
-            this.guna2TextBox5.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
-            this.guna2TextBox5.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
-            this.guna2TextBox5.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.guna2TextBox5.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.guna2TextBox5.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.guna2TextBox5.Font = new System.Drawing.Font("Nirmala UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.guna2TextBox5.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.guna2TextBox5.Location = new System.Drawing.Point(285, 394);
-            this.guna2TextBox5.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.guna2TextBox5.Name = "guna2TextBox5";
-            this.guna2TextBox5.PasswordChar = '\0';
-            this.guna2TextBox5.PlaceholderText = "";
-            this.guna2TextBox5.ReadOnly = true;
-            this.guna2TextBox5.SelectedText = "";
-            this.guna2TextBox5.Size = new System.Drawing.Size(363, 30);
-            this.guna2TextBox5.TabIndex = 35;
+            this.TextBoxPhone.BackColor = System.Drawing.Color.Azure;
+            this.TextBoxPhone.BorderRadius = 5;
+            this.TextBoxPhone.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.TextBoxPhone.DefaultText = "";
+            this.TextBoxPhone.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
+            this.TextBoxPhone.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
+            this.TextBoxPhone.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.TextBoxPhone.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.TextBoxPhone.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.TextBoxPhone.Font = new System.Drawing.Font("Nirmala UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.TextBoxPhone.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.TextBoxPhone.Location = new System.Drawing.Point(285, 394);
+            this.TextBoxPhone.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.TextBoxPhone.Name = "TextBoxPhone";
+            this.TextBoxPhone.PasswordChar = '\0';
+            this.TextBoxPhone.PlaceholderText = "";
+            this.TextBoxPhone.ReadOnly = true;
+            this.TextBoxPhone.SelectedText = "";
+            this.TextBoxPhone.Size = new System.Drawing.Size(363, 30);
+            this.TextBoxPhone.TabIndex = 35;
             // 
-            // guna2TextBox4
+            // TextBoxCompany
             // 
-            this.guna2TextBox4.BackColor = System.Drawing.Color.Azure;
-            this.guna2TextBox4.BorderRadius = 5;
-            this.guna2TextBox4.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.guna2TextBox4.DefaultText = "";
-            this.guna2TextBox4.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
-            this.guna2TextBox4.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
-            this.guna2TextBox4.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.guna2TextBox4.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.guna2TextBox4.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.guna2TextBox4.Font = new System.Drawing.Font("Nirmala UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.guna2TextBox4.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.guna2TextBox4.Location = new System.Drawing.Point(285, 327);
-            this.guna2TextBox4.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.guna2TextBox4.Name = "guna2TextBox4";
-            this.guna2TextBox4.PasswordChar = '\0';
-            this.guna2TextBox4.PlaceholderText = "";
-            this.guna2TextBox4.ReadOnly = true;
-            this.guna2TextBox4.SelectedText = "";
-            this.guna2TextBox4.Size = new System.Drawing.Size(363, 30);
-            this.guna2TextBox4.TabIndex = 34;
+            this.TextBoxCompany.BackColor = System.Drawing.Color.Azure;
+            this.TextBoxCompany.BorderRadius = 5;
+            this.TextBoxCompany.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.TextBoxCompany.DefaultText = "";
+            this.TextBoxCompany.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
+            this.TextBoxCompany.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
+            this.TextBoxCompany.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.TextBoxCompany.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.TextBoxCompany.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.TextBoxCompany.Font = new System.Drawing.Font("Nirmala UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.TextBoxCompany.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.TextBoxCompany.Location = new System.Drawing.Point(285, 327);
+            this.TextBoxCompany.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.TextBoxCompany.Name = "TextBoxCompany";
+            this.TextBoxCompany.PasswordChar = '\0';
+            this.TextBoxCompany.PlaceholderText = "";
+            this.TextBoxCompany.ReadOnly = true;
+            this.TextBoxCompany.SelectedText = "";
+            this.TextBoxCompany.Size = new System.Drawing.Size(363, 30);
+            this.TextBoxCompany.TabIndex = 34;
             // 
-            // guna2TextBox3
+            // TextBoxLocation
             // 
-            this.guna2TextBox3.BackColor = System.Drawing.Color.Azure;
-            this.guna2TextBox3.BorderRadius = 5;
-            this.guna2TextBox3.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.guna2TextBox3.DefaultText = "";
-            this.guna2TextBox3.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
-            this.guna2TextBox3.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
-            this.guna2TextBox3.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.guna2TextBox3.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.guna2TextBox3.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.guna2TextBox3.Font = new System.Drawing.Font("Nirmala UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.guna2TextBox3.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.guna2TextBox3.Location = new System.Drawing.Point(285, 266);
-            this.guna2TextBox3.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.guna2TextBox3.Name = "guna2TextBox3";
-            this.guna2TextBox3.PasswordChar = '\0';
-            this.guna2TextBox3.PlaceholderText = "";
-            this.guna2TextBox3.ReadOnly = true;
-            this.guna2TextBox3.SelectedText = "";
-            this.guna2TextBox3.Size = new System.Drawing.Size(363, 30);
-            this.guna2TextBox3.TabIndex = 33;
+            this.TextBoxLocation.BackColor = System.Drawing.Color.Azure;
+            this.TextBoxLocation.BorderRadius = 5;
+            this.TextBoxLocation.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.TextBoxLocation.DefaultText = "";
+            this.TextBoxLocation.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
+            this.TextBoxLocation.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
+            this.TextBoxLocation.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.TextBoxLocation.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.TextBoxLocation.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.TextBoxLocation.Font = new System.Drawing.Font("Nirmala UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.TextBoxLocation.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.TextBoxLocation.Location = new System.Drawing.Point(285, 266);
+            this.TextBoxLocation.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.TextBoxLocation.Name = "TextBoxLocation";
+            this.TextBoxLocation.PasswordChar = '\0';
+            this.TextBoxLocation.PlaceholderText = "";
+            this.TextBoxLocation.ReadOnly = true;
+            this.TextBoxLocation.SelectedText = "";
+            this.TextBoxLocation.Size = new System.Drawing.Size(363, 30);
+            this.TextBoxLocation.TabIndex = 33;
             // 
-            // guna2TextBox2
+            // TextBoxGmail
             // 
-            this.guna2TextBox2.BackColor = System.Drawing.Color.Azure;
-            this.guna2TextBox2.BorderRadius = 5;
-            this.guna2TextBox2.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.guna2TextBox2.DefaultText = "";
-            this.guna2TextBox2.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
-            this.guna2TextBox2.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
-            this.guna2TextBox2.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.guna2TextBox2.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.guna2TextBox2.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.guna2TextBox2.Font = new System.Drawing.Font("Nirmala UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.guna2TextBox2.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.guna2TextBox2.Location = new System.Drawing.Point(285, 198);
-            this.guna2TextBox2.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.guna2TextBox2.Name = "guna2TextBox2";
-            this.guna2TextBox2.PasswordChar = '\0';
-            this.guna2TextBox2.PlaceholderText = "";
-            this.guna2TextBox2.ReadOnly = true;
-            this.guna2TextBox2.SelectedText = "";
-            this.guna2TextBox2.Size = new System.Drawing.Size(363, 30);
-            this.guna2TextBox2.TabIndex = 32;
+            this.TextBoxGmail.BackColor = System.Drawing.Color.Azure;
+            this.TextBoxGmail.BorderRadius = 5;
+            this.TextBoxGmail.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.TextBoxGmail.DefaultText = "";
+            this.TextBoxGmail.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
+            this.TextBoxGmail.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
+            this.TextBoxGmail.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.TextBoxGmail.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.TextBoxGmail.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.TextBoxGmail.Font = new System.Drawing.Font("Nirmala UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.TextBoxGmail.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.TextBoxGmail.Location = new System.Drawing.Point(285, 198);
+            this.TextBoxGmail.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.TextBoxGmail.Name = "TextBoxGmail";
+            this.TextBoxGmail.PasswordChar = '\0';
+            this.TextBoxGmail.PlaceholderText = "";
+            this.TextBoxGmail.ReadOnly = true;
+            this.TextBoxGmail.SelectedText = "";
+            this.TextBoxGmail.Size = new System.Drawing.Size(363, 30);
+            this.TextBoxGmail.TabIndex = 32;
             // 
             // avatar
             // 
@@ -224,48 +225,35 @@
             this.label4.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.label4.Location = new System.Drawing.Point(282, 177);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(86, 17);
+            this.label4.Size = new System.Drawing.Size(41, 17);
             this.label4.TabIndex = 29;
-            this.label4.Text = "Display name";
+            this.label4.Text = "Gmail";
             // 
-            // panel3
+            // label2
             // 
-            this.panel3.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.panel3.Controls.Add(this.guna2TextBox1);
-            this.panel3.Controls.Add(this.TextUserName);
-            this.panel3.Controls.Add(this.label3);
-            this.panel3.Controls.Add(this.label2);
-            this.panel3.ForeColor = System.Drawing.SystemColors.ControlLight;
-            this.panel3.Location = new System.Drawing.Point(247, 24);
-            this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(438, 127);
-            this.panel3.TabIndex = 31;
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Nirmala UI", 7.8F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.label2.Location = new System.Drawing.Point(33, 8);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(67, 17);
+            this.label2.TabIndex = 0;
+            this.label2.Text = "Username";
             // 
-            // guna2TextBox1
+            // label3
             // 
-            this.guna2TextBox1.BackColor = System.Drawing.Color.Azure;
-            this.guna2TextBox1.BorderRadius = 5;
-            this.guna2TextBox1.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.guna2TextBox1.DefaultText = "";
-            this.guna2TextBox1.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
-            this.guna2TextBox1.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
-            this.guna2TextBox1.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.guna2TextBox1.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.guna2TextBox1.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.guna2TextBox1.Font = new System.Drawing.Font("Nirmala UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.guna2TextBox1.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.guna2TextBox1.Location = new System.Drawing.Point(36, 82);
-            this.guna2TextBox1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.guna2TextBox1.Name = "guna2TextBox1";
-            this.guna2TextBox1.PasswordChar = '\0';
-            this.guna2TextBox1.PlaceholderText = "";
-            this.guna2TextBox1.ReadOnly = true;
-            this.guna2TextBox1.SelectedText = "";
-            this.guna2TextBox1.Size = new System.Drawing.Size(363, 30);
-            this.guna2TextBox1.TabIndex = 3;
+            this.label3.AutoSize = true;
+            this.label3.Font = new System.Drawing.Font("Nirmala UI", 7.8F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.label3.Location = new System.Drawing.Point(35, 63);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(64, 17);
+            this.label3.TabIndex = 0;
+            this.label3.Text = "Password";
             // 
             // TextUserName
             // 
+            this.TextUserName.AccessibleRole = System.Windows.Forms.AccessibleRole.Text;
             this.TextUserName.BackColor = System.Drawing.Color.Azure;
             this.TextUserName.BorderRadius = 5;
             this.TextUserName.Cursor = System.Windows.Forms.Cursors.IBeam;
@@ -282,45 +270,58 @@
             this.TextUserName.Name = "TextUserName";
             this.TextUserName.PasswordChar = '\0';
             this.TextUserName.PlaceholderText = "";
-            this.TextUserName.ReadOnly = true;
             this.TextUserName.SelectedText = "";
             this.TextUserName.Size = new System.Drawing.Size(363, 30);
             this.TextUserName.TabIndex = 2;
             this.TextUserName.TextChanged += new System.EventHandler(this.TextUserName_TextChanged);
             // 
-            // label3
+            // TextBoxPassword
             // 
-            this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Nirmala UI", 7.8F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.label3.Location = new System.Drawing.Point(35, 63);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(64, 17);
-            this.label3.TabIndex = 0;
-            this.label3.Text = "Password";
+            this.TextBoxPassword.BackColor = System.Drawing.Color.Azure;
+            this.TextBoxPassword.BorderRadius = 5;
+            this.TextBoxPassword.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.TextBoxPassword.DefaultText = "";
+            this.TextBoxPassword.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
+            this.TextBoxPassword.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
+            this.TextBoxPassword.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.TextBoxPassword.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.TextBoxPassword.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.TextBoxPassword.Font = new System.Drawing.Font("Nirmala UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.TextBoxPassword.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.TextBoxPassword.Location = new System.Drawing.Point(36, 82);
+            this.TextBoxPassword.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.TextBoxPassword.Name = "TextBoxPassword";
+            this.TextBoxPassword.PasswordChar = '\0';
+            this.TextBoxPassword.PlaceholderText = "●●●●●●●●●●●●●";
+            this.TextBoxPassword.ReadOnly = true;
+            this.TextBoxPassword.SelectedText = "";
+            this.TextBoxPassword.Size = new System.Drawing.Size(363, 30);
+            this.TextBoxPassword.TabIndex = 3;
             // 
-            // label2
+            // panel3
             // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Nirmala UI", 7.8F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.label2.Location = new System.Drawing.Point(33, 8);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(67, 17);
-            this.label2.TabIndex = 0;
-            this.label2.Text = "Username";
+            this.panel3.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.panel3.Controls.Add(this.TextBoxPassword);
+            this.panel3.Controls.Add(this.TextUserName);
+            this.panel3.Controls.Add(this.label3);
+            this.panel3.Controls.Add(this.label2);
+            this.panel3.ForeColor = System.Drawing.SystemColors.ControlLight;
+            this.panel3.Location = new System.Drawing.Point(247, 24);
+            this.panel3.Name = "panel3";
+            this.panel3.Size = new System.Drawing.Size(438, 127);
+            this.panel3.TabIndex = 31;
             // 
             // Profile_Form5
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
             this.BackColor = System.Drawing.Color.Azure;
             this.ClientSize = new System.Drawing.Size(750, 502);
-            this.Controls.Add(this.BtnCancel);
+            this.Controls.Add(this.BtnEdit);
             this.Controls.Add(this.BtnSave);
-            this.Controls.Add(this.guna2TextBox5);
-            this.Controls.Add(this.guna2TextBox4);
-            this.Controls.Add(this.guna2TextBox3);
-            this.Controls.Add(this.guna2TextBox2);
+            this.Controls.Add(this.TextBoxPhone);
+            this.Controls.Add(this.TextBoxCompany);
+            this.Controls.Add(this.TextBoxLocation);
+            this.Controls.Add(this.TextBoxGmail);
             this.Controls.Add(this.avatar);
             this.Controls.Add(this.label7);
             this.Controls.Add(this.label6);
@@ -341,21 +342,21 @@
 
         #endregion
 
-        private Guna.UI2.WinForms.Guna2Button BtnCancel;
+        private Guna.UI2.WinForms.Guna2Button BtnEdit;
         private Guna.UI2.WinForms.Guna2Button BtnSave;
-        private Guna.UI2.WinForms.Guna2TextBox guna2TextBox5;
-        private Guna.UI2.WinForms.Guna2TextBox guna2TextBox4;
-        private Guna.UI2.WinForms.Guna2TextBox guna2TextBox3;
-        private Guna.UI2.WinForms.Guna2TextBox guna2TextBox2;
+        private Guna.UI2.WinForms.Guna2TextBox TextBoxPhone;
+        private Guna.UI2.WinForms.Guna2TextBox TextBoxCompany;
+        private Guna.UI2.WinForms.Guna2TextBox TextBoxLocation;
+        private Guna.UI2.WinForms.Guna2TextBox TextBoxGmail;
         private System.Windows.Forms.PictureBox avatar;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.Panel panel3;
-        private Guna.UI2.WinForms.Guna2TextBox guna2TextBox1;
-        private Guna.UI2.WinForms.Guna2TextBox TextUserName;
-        private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Label label3;
+        private Guna.UI2.WinForms.Guna2TextBox TextUserName;
+        private Guna.UI2.WinForms.Guna2TextBox TextBoxPassword;
+        private System.Windows.Forms.Panel panel3;
     }
 }

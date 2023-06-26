@@ -14,6 +14,7 @@ using FireSharp.Interfaces;
 using FireSharp.Config;
 using FireSharp.Response;
 using System.Security.Principal;
+using System.Security.Cryptography;
 
 namespace UI
 {
@@ -36,7 +37,14 @@ namespace UI
         {
 
         }
-
+        private string HashPassword(string password)
+        {
+            using (var sha256 = SHA256.Create())
+            {
+                byte[] hashedBytes = sha256.ComputeHash(Encoding.UTF8.GetBytes(password));
+                return BitConverter.ToString(hashedBytes).Replace("-", "").ToLower();
+            }
+        }
         private async void guna2Button1_Click(object sender, EventArgs e)
         {
             if(guna2TextBox1.Text != guna2TextBox2.Text)
@@ -70,7 +78,7 @@ namespace UI
 
             }
 
-            reg.passwd = guna2TextBox2.Text;
+            reg.passwd = HashPassword(guna2TextBox2.Text);
             SetResponse response1 = await client.SetAsync("Account/" + acc_name, reg);
             Register result = response1.ResultAs<Register>();
             MessageBox.Show("Already update password");

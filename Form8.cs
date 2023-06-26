@@ -10,6 +10,7 @@ using System.Data;
 using System.Drawing;
 using System.Linq;
 using System.Runtime.Remoting.Services;
+using System.Security.Cryptography;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
@@ -41,6 +42,14 @@ namespace UI
             catch (Exception ex)
             {
                 MessageBox.Show(ex.Message + "Check your connection!");
+            }
+        }
+        private string HashPassword(string password)
+        {
+            using (var sha256 = SHA256.Create())
+            {
+                byte[] hashedBytes = sha256.ComputeHash(Encoding.UTF8.GetBytes(password));
+                return BitConverter.ToString(hashedBytes).Replace("-", "").ToLower();
             }
         }
 
@@ -76,10 +85,12 @@ namespace UI
                 DateTime Now = DateTime.Now;
                 IDRoom = (random.Next(10000, 99999)).ToString();
                 IDRoom = await CheckID(IDRoom);
+
+                string non_hashPass_Room = CreatePassword();
                 var Enter = new Enter_Room
                 {
                     ID_Room = IDRoom,
-                    Pass_Room = CreatePassword(),
+                    Pass_Room = HashPassword(non_hashPass_Room),
                     Type_Room = "Private room",
                     DateTime = Now.ToString(),
                     Capacity = 50,

@@ -46,5 +46,18 @@ namespace UI
         {
 
         }
+
+        private void pictureBox1_Click(object sender, EventArgs e)
+        {
+            bool check = false;
+            if(check )
+            {
+                pictureBox1.Image = Properties.Resources.mute;
+            }
+            else
+            {
+                pictureBox1.Image = Properties.Resources.more__1_;
+            }
+        }
     }
 }
