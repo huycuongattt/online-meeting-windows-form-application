@@ -88,7 +88,7 @@ namespace UI
                                 Enter_Room attend = response2.ResultAs<Enter_Room>();
                                 MessageBox.Show("Join room successfully!", "Notification", MessageBoxButtons.OK);
                                 this.Hide();
-                                Form4 f4 = new Form4(UserName);
+                                Form4 f4 = new Form4(UserName, ID_Room, "N/A");
                                 f4.ShowDialog();
 
                             }
@@ -145,7 +145,7 @@ namespace UI
                                     Enter_Room attend = response2.ResultAs<Enter_Room>();
                                     MessageBox.Show("Join room successfully!", "Notification", MessageBoxButtons.OK);
                                     this.Hide();
-                                    Form4 f4 = new Form4(UserName);
+                                    Form4 f4 = new Form4(UserName, ID_Room, TextBoxPassword.Text.Trim());
                                     f4.ShowDialog();
                                 }
 

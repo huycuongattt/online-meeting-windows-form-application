@@ -61,6 +61,10 @@
             this.guna2Button1 = new Guna.UI2.WinForms.Guna2Button();
             this.Message = new System.Windows.Forms.TextBox();
             this.Chat = new System.Windows.Forms.ListView();
+            this.ID_Room = new System.Windows.Forms.TextBox();
+            this.Pass_Room = new System.Windows.Forms.TextBox();
+            this.label1 = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
             this.axRDPViewer1 = new AxRDPCOMAPILib.AxRDPViewer();
             this.guna2Panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox5)).BeginInit();
@@ -426,18 +430,17 @@
             this.guna2Button1.ImageSize = new System.Drawing.Size(30, 30);
             this.guna2Button1.Location = new System.Drawing.Point(1204, 720);
             this.guna2Button1.Name = "guna2Button1";
-            this.guna2Button1.Size = new System.Drawing.Size(62, 78);
+            this.guna2Button1.Size = new System.Drawing.Size(62, 36);
             this.guna2Button1.TabIndex = 34;
-            this.guna2Button1.Text = "guna2Button1";
             this.guna2Button1.Click += new System.EventHandler(this.guna2Button1_Click_1);
             // 
             // Message
             // 
             this.Message.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.Message.Font = new System.Drawing.Font("Nirmala UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Message.Font = new System.Drawing.Font("Tahoma", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Message.Location = new System.Drawing.Point(1011, 722);
             this.Message.Name = "Message";
-            this.Message.Size = new System.Drawing.Size(187, 34);
+            this.Message.Size = new System.Drawing.Size(187, 29);
             this.Message.TabIndex = 33;
             this.Message.TextChanged += new System.EventHandler(this.Message_TextChanged);
             // 
@@ -445,7 +448,7 @@
             // 
             this.Chat.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.Chat.Font = new System.Drawing.Font("Nirmala UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Chat.Font = new System.Drawing.Font("Tahoma", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Chat.HideSelection = false;
             this.Chat.Location = new System.Drawing.Point(1011, 54);
             this.Chat.Name = "Chat";
@@ -453,6 +456,50 @@
             this.Chat.TabIndex = 32;
             this.Chat.UseCompatibleStateImageBehavior = false;
             this.Chat.View = System.Windows.Forms.View.List;
+            // 
+            // ID_Room
+            // 
+            this.ID_Room.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.ID_Room.BackColor = System.Drawing.Color.Azure;
+            this.ID_Room.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.ID_Room.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.ID_Room.Location = new System.Drawing.Point(341, 12);
+            this.ID_Room.Name = "ID_Room";
+            this.ID_Room.Size = new System.Drawing.Size(148, 25);
+            this.ID_Room.TabIndex = 35;
+            // 
+            // Pass_Room
+            // 
+            this.Pass_Room.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.Pass_Room.BackColor = System.Drawing.Color.Azure;
+            this.Pass_Room.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.Pass_Room.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Pass_Room.Location = new System.Drawing.Point(556, 12);
+            this.Pass_Room.Name = "Pass_Room";
+            this.Pass_Room.Size = new System.Drawing.Size(148, 25);
+            this.Pass_Room.TabIndex = 35;
+            // 
+            // label1
+            // 
+            this.label1.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(297, 12);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(38, 24);
+            this.label1.TabIndex = 36;
+            this.label1.Text = "ID:";
+            // 
+            // label2
+            // 
+            this.label2.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Location = new System.Drawing.Point(493, 12);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(57, 24);
+            this.label2.TabIndex = 36;
+            this.label2.Text = "Pass:";
             // 
             // axRDPViewer1
             // 
@@ -474,6 +521,10 @@
             this.AutoScroll = true;
             this.BackColor = System.Drawing.Color.Azure;
             this.ClientSize = new System.Drawing.Size(1278, 810);
+            this.Controls.Add(this.label2);
+            this.Controls.Add(this.label1);
+            this.Controls.Add(this.Pass_Room);
+            this.Controls.Add(this.ID_Room);
             this.Controls.Add(this.guna2Button1);
             this.Controls.Add(this.Message);
             this.Controls.Add(this.Chat);
@@ -556,5 +607,9 @@
         private Guna.UI2.WinForms.Guna2Button guna2Button1;
         private System.Windows.Forms.TextBox Message;
         private System.Windows.Forms.ListView Chat;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.TextBox Pass_Room;
+        private System.Windows.Forms.TextBox ID_Room;
     }
 }
