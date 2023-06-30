@@ -69,13 +69,11 @@ namespace UI
                         foreach (var get in map)
                         {
                             string ID_Room = get.Value.ID_Room;
-                            string HostName = get.Value.Host_name;
                             //string Pass_room = get.Value.Pass_Room;
                             if (TextID.Text.Trim() == ID_Room)
                             {
                                 enter1 = true;
-                                var form1 = (Form1)Application.OpenForms["Form1"];
-                                string UserName = form1.UserName;
+                                string HostName = get.Value.Host_name;
                                 Random random = new Random();
                                 DateTime Now = DateTime.Now;
                                 string IDAttend = (random.Next(1, 99999)).ToString();
@@ -128,10 +126,10 @@ namespace UI
                             {
                                 string ID_Room = get.Value.ID_Room;
                                 string Pass_room = get.Value.Pass_Room;
-                                string HostName = get.Value.Host_name;
                                 if (TextID.Text.Trim() == ID_Room && HashPassword(TextBoxPassword.Text.Trim()) == Pass_room)
                                 {
                                     enter2 = true;
+                                    string HostName = get.Value.Host_name;
                                     Random random = new Random();
                                     DateTime Now = DateTime.Now;
                                     string IDAttend = (random.Next(1, 99999)).ToString();
@@ -147,7 +145,7 @@ namespace UI
                                     Enter_Room attend = response2.ResultAs<Enter_Room>();
                                     MessageBox.Show("Join room successfully!", "Notification", MessageBoxButtons.OK);
                                     this.Hide();
-                                    Form4 f4 = new Form4(UserName, ID_Room, TextBoxPassword.Text.Trim(), UserName);
+                                    Form4 f4 = new Form4(UserName, ID_Room, TextBoxPassword.Text.Trim(), HostName);
                                     f4.ShowDialog();
                                 }
 
