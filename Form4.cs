@@ -49,7 +49,7 @@ namespace UI
         {
             //IP: server address
             int Port = Int32.Parse("9090");
-            IP = new IPEndPoint(IPAddress.Parse("192.168.1.26"), Port);
+            IP = new IPEndPoint(IPAddress.Parse("34.126.84.167"), Port);
             Client = new Socket(AddressFamily.InterNetwork, SocketType.Stream, ProtocolType.IP);
 
             try
@@ -195,7 +195,7 @@ namespace UI
             if (isShareScreen)
             {
                 isShareScreen = false;
-                guna2HtmlLabel6.Text = "Off";
+                guna2HtmlLabel6.Text = "On";
                 x.Close();
                 x = null;
             }
@@ -220,7 +220,7 @@ namespace UI
                 string connectStr = Invitation.ConnectionString;
                 Send(connectStr);
 
-                guna2HtmlLabel6.Text = "On";
+                guna2HtmlLabel6.Text = "Off";
             }
         }
 

@@ -36,10 +36,10 @@
             this.guna2PictureBox1 = new Guna.UI2.WinForms.Guna2PictureBox();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
-            this.guna2TextBox1 = new Guna.UI2.WinForms.Guna2TextBox();
+            this.txtBoxUsername = new Guna.UI2.WinForms.Guna2TextBox();
             this.guna2PictureBox2 = new Guna.UI2.WinForms.Guna2PictureBox();
             this.guna2PictureBox3 = new Guna.UI2.WinForms.Guna2PictureBox();
-            this.guna2TextBox2 = new Guna.UI2.WinForms.Guna2TextBox();
+            this.txtBoxPassword = new Guna.UI2.WinForms.Guna2TextBox();
             this.label3 = new System.Windows.Forms.Label();
             this.guna2CheckBox1 = new Guna.UI2.WinForms.Guna2CheckBox();
             this.guna2Button1 = new Guna.UI2.WinForms.Guna2Button();
@@ -47,9 +47,9 @@
             this.label4 = new System.Windows.Forms.Label();
             this.guna2Separator2 = new Guna.UI2.WinForms.Guna2Separator();
             this.label5 = new System.Windows.Forms.Label();
-            this.linkLabel1 = new System.Windows.Forms.LinkLabel();
+            this.link_toSignup = new System.Windows.Forms.LinkLabel();
             this.guna2PictureBox4 = new Guna.UI2.WinForms.Guna2PictureBox();
-            this.linkLabel2 = new System.Windows.Forms.LinkLabel();
+            this.linkForgetPass = new System.Windows.Forms.LinkLabel();
             this.guna2Panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox2)).BeginInit();
@@ -108,31 +108,31 @@
             this.label2.TabIndex = 2;
             this.label2.Text = "Username: ";
             // 
-            // guna2TextBox1
+            // txtBoxUsername
             // 
-            this.guna2TextBox1.Animated = true;
-            this.guna2TextBox1.BackColor = System.Drawing.Color.LightCyan;
-            this.guna2TextBox1.BorderRadius = 5;
-            this.guna2TextBox1.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.guna2TextBox1.DefaultText = "";
-            this.guna2TextBox1.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
-            this.guna2TextBox1.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
-            this.guna2TextBox1.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.guna2TextBox1.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.guna2TextBox1.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.guna2TextBox1.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.guna2TextBox1.ForeColor = System.Drawing.Color.Gray;
-            this.guna2TextBox1.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.guna2TextBox1.Location = new System.Drawing.Point(602, 207);
-            this.guna2TextBox1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.guna2TextBox1.Name = "guna2TextBox1";
-            this.guna2TextBox1.PasswordChar = '\0';
-            this.guna2TextBox1.PlaceholderText = "Enter username ...";
-            this.guna2TextBox1.SelectedText = "";
-            this.guna2TextBox1.Size = new System.Drawing.Size(388, 48);
-            this.guna2TextBox1.TabIndex = 3;
-            this.guna2TextBox1.TextOffset = new System.Drawing.Point(32, 0);
-            this.guna2TextBox1.TextChanged += new System.EventHandler(this.guna2TextBox1_TextChanged);
+            this.txtBoxUsername.Animated = true;
+            this.txtBoxUsername.BackColor = System.Drawing.Color.LightCyan;
+            this.txtBoxUsername.BorderRadius = 5;
+            this.txtBoxUsername.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.txtBoxUsername.DefaultText = "";
+            this.txtBoxUsername.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
+            this.txtBoxUsername.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
+            this.txtBoxUsername.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txtBoxUsername.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txtBoxUsername.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.txtBoxUsername.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.txtBoxUsername.ForeColor = System.Drawing.Color.Gray;
+            this.txtBoxUsername.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.txtBoxUsername.Location = new System.Drawing.Point(602, 207);
+            this.txtBoxUsername.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.txtBoxUsername.Name = "txtBoxUsername";
+            this.txtBoxUsername.PasswordChar = '\0';
+            this.txtBoxUsername.PlaceholderText = "Enter username ...";
+            this.txtBoxUsername.SelectedText = "";
+            this.txtBoxUsername.Size = new System.Drawing.Size(388, 48);
+            this.txtBoxUsername.TabIndex = 3;
+            this.txtBoxUsername.TextOffset = new System.Drawing.Point(32, 0);
+            this.txtBoxUsername.TextChanged += new System.EventHandler(this.guna2TextBox1_TextChanged);
             // 
             // guna2PictureBox2
             // 
@@ -160,30 +160,29 @@
             this.guna2PictureBox3.TabStop = false;
             this.guna2PictureBox3.UseTransparentBackground = true;
             // 
-            // guna2TextBox2
+            // txtBoxPassword
             // 
-            this.guna2TextBox2.Animated = true;
-            this.guna2TextBox2.BackColor = System.Drawing.Color.LightCyan;
-            this.guna2TextBox2.BorderRadius = 5;
-            this.guna2TextBox2.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.guna2TextBox2.DefaultText = "";
-            this.guna2TextBox2.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
-            this.guna2TextBox2.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
-            this.guna2TextBox2.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.guna2TextBox2.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.guna2TextBox2.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.guna2TextBox2.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.guna2TextBox2.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.guna2TextBox2.Location = new System.Drawing.Point(602, 317);
-            this.guna2TextBox2.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.guna2TextBox2.Name = "guna2TextBox2";
-            this.guna2TextBox2.PasswordChar = '●';
-            this.guna2TextBox2.PlaceholderText = "Enter password ...";
-            this.guna2TextBox2.SelectedText = "";
-            this.guna2TextBox2.Size = new System.Drawing.Size(388, 48);
-            this.guna2TextBox2.TabIndex = 6;
-            this.guna2TextBox2.TextOffset = new System.Drawing.Point(32, 0);
-            this.guna2TextBox2.Leave += new System.EventHandler(this.txtBox2_Leave);
+            this.txtBoxPassword.Animated = true;
+            this.txtBoxPassword.BackColor = System.Drawing.Color.LightCyan;
+            this.txtBoxPassword.BorderRadius = 5;
+            this.txtBoxPassword.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.txtBoxPassword.DefaultText = "";
+            this.txtBoxPassword.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
+            this.txtBoxPassword.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
+            this.txtBoxPassword.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txtBoxPassword.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txtBoxPassword.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.txtBoxPassword.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.txtBoxPassword.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.txtBoxPassword.Location = new System.Drawing.Point(602, 317);
+            this.txtBoxPassword.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.txtBoxPassword.Name = "txtBoxPassword";
+            this.txtBoxPassword.PasswordChar = '●';
+            this.txtBoxPassword.PlaceholderText = "Enter password ...";
+            this.txtBoxPassword.SelectedText = "";
+            this.txtBoxPassword.Size = new System.Drawing.Size(388, 48);
+            this.txtBoxPassword.TabIndex = 6;
+            this.txtBoxPassword.TextOffset = new System.Drawing.Point(32, 0);
             // 
             // label3
             // 
@@ -232,7 +231,7 @@
             this.guna2Button1.Size = new System.Drawing.Size(180, 45);
             this.guna2Button1.TabIndex = 9;
             this.guna2Button1.Text = "LOGIN";
-            this.guna2Button1.Click += new System.EventHandler(this.guna2Button1_Click);
+            this.guna2Button1.Click += new System.EventHandler(this.btnLogin_Click);
             // 
             // guna2Separator1
             // 
@@ -268,18 +267,18 @@
             this.label5.TabIndex = 13;
             this.label5.Text = "Do not Have an Account:";
             // 
-            // linkLabel1
+            // link_toSignup
             // 
-            this.linkLabel1.AutoSize = true;
-            this.linkLabel1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.linkLabel1.LinkColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
-            this.linkLabel1.Location = new System.Drawing.Point(872, 526);
-            this.linkLabel1.Name = "linkLabel1";
-            this.linkLabel1.Size = new System.Drawing.Size(79, 25);
-            this.linkLabel1.TabIndex = 14;
-            this.linkLabel1.TabStop = true;
-            this.linkLabel1.Text = "Sign up";
-            this.linkLabel1.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.linkLabel1_LinkClicked);
+            this.link_toSignup.AutoSize = true;
+            this.link_toSignup.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.link_toSignup.LinkColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
+            this.link_toSignup.Location = new System.Drawing.Point(872, 526);
+            this.link_toSignup.Name = "link_toSignup";
+            this.link_toSignup.Size = new System.Drawing.Size(79, 25);
+            this.link_toSignup.TabIndex = 14;
+            this.link_toSignup.TabStop = true;
+            this.link_toSignup.Text = "Sign up";
+            this.link_toSignup.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.link_toSignup_LinkClicked);
             // 
             // guna2PictureBox4
             // 
@@ -295,17 +294,17 @@
             this.guna2PictureBox4.UseTransparentBackground = true;
             this.guna2PictureBox4.Click += new System.EventHandler(this.guna2PictureBox4_Click);
             // 
-            // linkLabel2
+            // linkForgetPass
             // 
-            this.linkLabel2.AutoSize = true;
-            this.linkLabel2.LinkColor = System.Drawing.Color.LightSeaGreen;
-            this.linkLabel2.Location = new System.Drawing.Point(599, 381);
-            this.linkLabel2.Name = "linkLabel2";
-            this.linkLabel2.Size = new System.Drawing.Size(115, 16);
-            this.linkLabel2.TabIndex = 16;
-            this.linkLabel2.TabStop = true;
-            this.linkLabel2.Text = "Forgot password?";
-            this.linkLabel2.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.linkLabel2_LinkClicked);
+            this.linkForgetPass.AutoSize = true;
+            this.linkForgetPass.LinkColor = System.Drawing.Color.LightSeaGreen;
+            this.linkForgetPass.Location = new System.Drawing.Point(599, 381);
+            this.linkForgetPass.Name = "linkForgetPass";
+            this.linkForgetPass.Size = new System.Drawing.Size(115, 16);
+            this.linkForgetPass.TabIndex = 16;
+            this.linkForgetPass.TabStop = true;
+            this.linkForgetPass.Text = "Forgot password?";
+            this.linkForgetPass.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.linkForgetPass_LinkClicked);
             // 
             // Form1
             // 
@@ -313,9 +312,9 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Azure;
             this.ClientSize = new System.Drawing.Size(1043, 659);
-            this.Controls.Add(this.linkLabel2);
+            this.Controls.Add(this.linkForgetPass);
             this.Controls.Add(this.guna2PictureBox4);
-            this.Controls.Add(this.linkLabel1);
+            this.Controls.Add(this.link_toSignup);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.guna2Separator2);
             this.Controls.Add(this.label4);
@@ -323,10 +322,10 @@
             this.Controls.Add(this.guna2Button1);
             this.Controls.Add(this.guna2CheckBox1);
             this.Controls.Add(this.guna2PictureBox3);
-            this.Controls.Add(this.guna2TextBox2);
+            this.Controls.Add(this.txtBoxPassword);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.guna2PictureBox2);
-            this.Controls.Add(this.guna2TextBox1);
+            this.Controls.Add(this.txtBoxUsername);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.guna2Panel1);
@@ -349,7 +348,7 @@
 
         private Guna.UI2.WinForms.Guna2Elipse guna2Elipse1;
         private Guna.UI2.WinForms.Guna2DragControl guna2DragControl1;
-        private System.Windows.Forms.LinkLabel linkLabel1;
+        private System.Windows.Forms.LinkLabel link_toSignup;
         private System.Windows.Forms.Label label5;
         private Guna.UI2.WinForms.Guna2Separator guna2Separator2;
         private System.Windows.Forms.Label label4;
@@ -357,16 +356,16 @@
         private Guna.UI2.WinForms.Guna2Button guna2Button1;
         private Guna.UI2.WinForms.Guna2CheckBox guna2CheckBox1;
         private Guna.UI2.WinForms.Guna2PictureBox guna2PictureBox3;
-        private Guna.UI2.WinForms.Guna2TextBox guna2TextBox2;
+        private Guna.UI2.WinForms.Guna2TextBox txtBoxPassword;
         private System.Windows.Forms.Label label3;
         private Guna.UI2.WinForms.Guna2PictureBox guna2PictureBox2;
-        private Guna.UI2.WinForms.Guna2TextBox guna2TextBox1;
+        private Guna.UI2.WinForms.Guna2TextBox txtBoxUsername;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label1;
         private Guna.UI2.WinForms.Guna2Panel guna2Panel1;
         private Guna.UI2.WinForms.Guna2PictureBox guna2PictureBox1;
         private Guna.UI2.WinForms.Guna2PictureBox guna2PictureBox4;
-        private System.Windows.Forms.LinkLabel linkLabel2;
+        private System.Windows.Forms.LinkLabel linkForgetPass;
     }
 }
 

@@ -1,13 +1,6 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using System.Windows.Forms;
 using System.Text.RegularExpressions;
+using System.Windows.Forms;
 namespace UI
 {
     public partial class Form6 : Form
@@ -30,18 +23,18 @@ namespace UI
             return Regex.IsMatch(code, @"^[0-9]{6}$");
         }
         private void guna2Button1_Click(object sender, EventArgs e)
-        {
-            if(guna2TextBox1.Text == "")
+        {            
+            if (txtBoxCode.Text == "")
             {
                 MessageBox.Show("Please enter a code");
                 return;
             }
-            if (!checkCode(guna2TextBox1.Text))
+            if (!checkCode(txtBoxCode.Text))
             {
                 MessageBox.Show("Please enter code in correct format");
                 return;
             }
-            if (code == (guna2TextBox1.Text).ToString())
+            if (code == (txtBoxCode.Text).ToString())
             {
                 MessageBox.Show("Verify successfully!");
                 NewPass newPass = new NewPass(acc_name);

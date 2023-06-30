@@ -248,9 +248,9 @@
             this.guna2HtmlLabel6.ForeColor = System.Drawing.Color.LightSeaGreen;
             this.guna2HtmlLabel6.Location = new System.Drawing.Point(654, 776);
             this.guna2HtmlLabel6.Name = "guna2HtmlLabel6";
-            this.guna2HtmlLabel6.Size = new System.Drawing.Size(19, 18);
+            this.guna2HtmlLabel6.Size = new System.Drawing.Size(20, 18);
             this.guna2HtmlLabel6.TabIndex = 22;
-            this.guna2HtmlLabel6.Text = "Off      ";
+            this.guna2HtmlLabel6.Text = "On    ";
             this.guna2HtmlLabel6.TextAlignment = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // guna2HtmlLabel7
