@@ -201,7 +201,7 @@ namespace UI
             if (isShareScreen)
             {
                 isShareScreen = false;
-                guna2HtmlLabel6.Text = "Off";
+                guna2HtmlLabel6.Text = "On";
                 x.Close();
                 x = null;
             }
@@ -226,7 +226,7 @@ namespace UI
                 string connectStr = Invitation.ConnectionString;
                 Send(connectStr);
 
-                guna2HtmlLabel6.Text = "On";
+                guna2HtmlLabel6.Text = "Off";
             }
         }
 

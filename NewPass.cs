@@ -33,6 +33,18 @@ namespace UI
 
         };
         IFirebaseClient client;
+        private void NewPass_Load(object sender, EventArgs e)
+        {
+            try
+            {
+                client = new FireSharp.FirebaseClient(config);
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message + "Check your connection!");
+            }
+        }
+
         private void guna2HtmlLabel1_Click(object sender, EventArgs e)
         {
 
@@ -45,15 +57,18 @@ namespace UI
                 return BitConverter.ToString(hashedBytes).Replace("-", "").ToLower();
             }
         }
-        private async void guna2Button1_Click(object sender, EventArgs e)
+        
+        
+        private async void btnReset_Click(object sender, EventArgs e)
         {
-            if(guna2TextBox1.Text != guna2TextBox2.Text)
+            //Check password có trùng khớp với nhau không 
+            if (txtBoxNewPass.Text != txtBoxConfirmPass.Text)
             {
                 MessageBox.Show("No matching password");
                 return;
             }
             var reg = new Register();
-            //string name, pass, c_name, locate, gmail, phone;
+            //Truy cập table Account trên database
             FirebaseResponse response = await client.GetAsync("Account/");
             Dictionary<string, Register> map = response.ResultAs<Dictionary<string, Register>>();
 
@@ -66,7 +81,7 @@ namespace UI
                     if (acc_name == username)
                     {
                         reg.username = get.Value.username;
-                        
+
                         reg.Location = get.Value.Location;
                         reg.Gmail = get.Value.Gmail;
                         reg.Phone = get.Value.Phone;
@@ -78,26 +93,14 @@ namespace UI
 
             }
 
-            reg.passwd = HashPassword(guna2TextBox2.Text);
+            reg.passwd = HashPassword(txtBoxConfirmPass.Text);
             SetResponse response1 = await client.SetAsync("Account/" + acc_name, reg);
             Register result = response1.ResultAs<Register>();
             MessageBox.Show("Already update password");
             this.Hide();
             Form1 form1 = new Form1();
             form1.ShowDialog();
-            
-        }
 
-        private void NewPass_Load(object sender, EventArgs e)
-        {
-            try
-            {
-                client = new FireSharp.FirebaseClient(config);
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show(ex.Message + "Check your connection!");
-            }
         }
     }
 }
