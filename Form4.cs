@@ -21,13 +21,15 @@ namespace UI
     {
         IPEndPoint IP;
         Socket Client;
+        private string UserName;
         RDPSession x = new RDPSession();
 
 
         bool isShareScreen = false;
-        public Form4()
+        public Form4(string username)
         {
             InitializeComponent();
+            UserName = username;
         }
 
         private void Form4_Load(object sender, EventArgs e)
@@ -35,11 +37,19 @@ namespace UI
             Connect();
         }
 
+        private void UpdateChat(string message)
+        {
+            Chat.Invoke((MethodInvoker)delegate
+            {
+                Chat.Items.Add(message);
+            });
+        }
+
         void Connect()
         {
             //IP: server address
             int Port = Int32.Parse("9090");
-            IP = new IPEndPoint(IPAddress.Parse("34.126.84.167"), Port);
+            IP = new IPEndPoint(IPAddress.Parse("192.168.1.26"), Port);
             Client = new Socket(AddressFamily.InterNetwork, SocketType.Stream, ProtocolType.IP);
 
             try
@@ -74,8 +84,8 @@ namespace UI
                     Client.Receive(data);
 
                     string y = (string)Deserialize(data);
-                    ViewScreenSharing(y);
-
+                    if (y.Contains("<E>")) ViewScreenSharing(y); 
+                    else UpdateChat(y);
                 }
             }
             catch (Exception ex)
@@ -232,6 +242,19 @@ namespace UI
             //Client.Disconnect(true);
             this.Close();
             
+        }
+
+        private void Message_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void guna2Button1_Click_1(object sender, EventArgs e)
+        {
+                string message = $"{UserName}: {Message.Text}";
+                UpdateChat(message);
+                Client.Send(Serialize(message));
+                Message.Clear();
         }
     }
 }
