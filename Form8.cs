@@ -75,9 +75,9 @@ namespace UI
                 };
                 SetResponse response = await client.SetAsync("Room/" + guna2TextBox7.Text, Enter);
                 Enter_Room go = response.ResultAs<Enter_Room>();
-                MessageBox.Show("Register successfully! ID Room is" + IDRoom, "Notification", MessageBoxButtons.OK);
+                MessageBox.Show("Register successfully! ID Room is " + IDRoom, "Notification", MessageBoxButtons.OK);
                 this.Hide();
-                Form4 f4 = new Form4(UserName, IDRoom, "N/A");
+                Form4 f4 = new Form4(UserName, IDRoom, "N/A", UserName);
                 f4.ShowDialog();
             }
             else
@@ -104,7 +104,7 @@ namespace UI
                 Enter_Room go = response.ResultAs<Enter_Room>();
                 MessageBox.Show("Register successfully! \n ID Room is " + IDRoom + "\n Pass Room is " + non_hashPass_Room, "Notification", MessageBoxButtons.OK);
                 this.Hide();
-                Form4 f4 = new Form4(UserName, IDRoom, non_hashPass_Room);
+                Form4 f4 = new Form4(UserName, IDRoom, non_hashPass_Room, UserName);
                 f4.ShowDialog();
             }
 

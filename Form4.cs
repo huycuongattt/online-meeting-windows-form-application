@@ -24,16 +24,18 @@ namespace UI
         private string UserName;
         private string ID;
         private string Pass;
+        private string HostName;
         RDPSession x = new RDPSession();
 
 
         bool isShareScreen = false;
-        public Form4(string username, string id, string pass)
+        public Form4(string username, string id, string pass, string host)
         {
             InitializeComponent();
             UserName = username;
             ID = id;
             Pass = pass;
+            HostName = host;
         }
 
         private void Form4_Load(object sender, EventArgs e)
@@ -41,6 +43,7 @@ namespace UI
             Connect();
             ID_Room.Text = ID;
             Pass_Room.Text = Pass;
+            UpdateChat(HostName + " is host room");
         }
 
         private void UpdateChat(string message)
@@ -69,7 +72,9 @@ namespace UI
                 Environment.Exit(0);
                 return;
             }
-
+            string str = UserName + " have joined room";
+            Send(str);
+            UpdateChat(str);
             Thread listener = new Thread(Receive);
             listener.IsBackground = true;
             listener.Start();
@@ -78,7 +83,7 @@ namespace UI
 
         void Send(string str)
         {
-            Client.Send(Serialize(str));
+            Client.Send(Serialize(ID + str));
         }
         void Receive()
         {
@@ -87,11 +92,14 @@ namespace UI
                 while (true)
                 {
                     byte[] data = new byte[1024 * 5000];
-                    Client.Receive(data);
-
+                    Client.Receive(data);  
                     string y = (string)Deserialize(data);
-                    if (y.Contains("<E>")) ViewScreenSharing(y); 
-                    else UpdateChat(y);
+                    if (y.Contains(ID))
+                    {
+                        y = y.Replace(ID, "");
+                        if (y.Contains("<E>")) ViewScreenSharing(y);
+                        else UpdateChat(y);
+                    }
                 }
             }
             catch (Exception ex)
@@ -244,6 +252,14 @@ namespace UI
 
         private void guna2PictureBox12_Click(object sender, EventArgs e)
         {
+            if (isShareScreen)
+            {
+                isShareScreen = false;
+                guna2HtmlLabel6.Text = "On";
+                x.Close();
+                x = null;
+            }
+            Send(UserName + " left room");
             Client.Close();
             //Client.Disconnect(true);
             this.Close();
@@ -259,6 +275,7 @@ namespace UI
         {
                 string message = $"{UserName}: {Message.Text}";
                 UpdateChat(message);
+                message = $"{ID}{UserName}: {Message.Text}";
                 Client.Send(Serialize(message));
                 Message.Clear();
         }
