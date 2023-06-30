@@ -120,7 +120,7 @@ namespace UI
                         login = true;  // set status cho flag thành true 
                         UserName = username;
                         this.Hide();
-                        Form5 f5 = new Form5();  // chuyển sang Form5 - Home page 
+                        Form5 f5 = new Form5(username);  // chuyển sang Form5 - Home page 
                         f5.ShowDialog();
 
                     }

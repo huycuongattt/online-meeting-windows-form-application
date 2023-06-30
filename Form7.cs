@@ -77,7 +77,7 @@ namespace UI
                                 Random random = new Random();
                                 DateTime Now = DateTime.Now;
                                 string IDAttend = (random.Next(1, 99999)).ToString();
-                                //IDAttend = await CheckID(IDAttend);
+                                IDAttend = await CheckID(IDAttend);
                                 var Attend = new Attend_Room
                                 {
                                     ID_Attend = IDAttend,
@@ -135,7 +135,7 @@ namespace UI
                                     Random random = new Random();
                                     DateTime Now = DateTime.Now;
                                     string IDAttend = (random.Next(1, 99999)).ToString();
-                                    //IDAttend = await CheckID(IDAttend);
+                                    IDAttend = await CheckID(IDAttend);
                                     var Attend = new Attend_Room
                                     {
                                         ID_Attend = IDAttend,
@@ -212,14 +212,17 @@ namespace UI
         {
             FirebaseResponse response = await client.GetAsync("Attend/");
             Dictionary<string, Attend_Room> Check = response.ResultAs<Dictionary<string, Attend_Room>>();
-            foreach (var get in Check)
+            if (Check != null)
             {
-                if (get.Value.ID_Attend == IDAttend.ToString())
+                foreach (var get in Check)
                 {
-                    Random random = new Random();
-                    DateTime Now = DateTime.Now;
-                    IDAttend = (random.Next(1, 99999)).ToString();
-                    return await CheckID(IDAttend);
+                    if (get.Value.ID_Attend == IDAttend.ToString())
+                    {
+                        Random random = new Random();
+                        DateTime Now = DateTime.Now;
+                        IDAttend = (random.Next(1, 99999)).ToString();
+                        return await CheckID(IDAttend);
+                    }
                 }
             }
             return IDAttend;

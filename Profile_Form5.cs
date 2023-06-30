@@ -19,9 +19,11 @@ namespace UI
 {
     public partial class Profile_Form5 : Form
     {
-        public Profile_Form5()
+        private string UserName;
+        public Profile_Form5(string username)
         {
             InitializeComponent();
+            UserName = username;
         }
         IFirebaseConfig config = new FirebaseConfig
         {
@@ -42,8 +44,6 @@ namespace UI
             try
             {
                 client = new FireSharp.FirebaseClient(config);
-                var form1 = (Form1)Application.OpenForms["Form1"];
-                string UserName = form1.UserName;
                 TextUserName.Text = UserName;
                 TextUserName.ReadOnly = true;
                 FirebaseResponse response = await client.GetAsync("Account/");
@@ -74,8 +74,7 @@ namespace UI
         }
         private async void BtnSave_Click(object sender, EventArgs e)
         {
-            var form1 = (Form1)Application.OpenForms["Form1"];
-            string UserName = form1.UserName;
+
             var reg = new Register();
             FirebaseResponse response = await client.GetAsync("Account/");
             Dictionary<string, Register> map = response.ResultAs<Dictionary<string, Register>>();

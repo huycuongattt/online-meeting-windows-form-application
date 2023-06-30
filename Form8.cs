@@ -134,13 +134,16 @@ namespace UI
         {
             FirebaseResponse response = await client.GetAsync("Room/");
             Dictionary<string, Enter_Room> Check = response.ResultAs<Dictionary<string, Enter_Room>>();
-            foreach (var get in Check)
+            if (Check != null)
             {
-                if (get.Value.ID_Room == IDRoom.ToString())
+                foreach (var get in Check)
                 {
-                    Random random = new Random();
-                    IDRoom= (random.Next(1, 99999)).ToString();
-                    return await CheckID(IDRoom);
+                    if (get.Value.ID_Room == IDRoom.ToString())
+                    {
+                        Random random = new Random();
+                        IDRoom = (random.Next(1, 99999)).ToString();
+                        return await CheckID(IDRoom);
+                    }
                 }
             }
             return IDRoom;

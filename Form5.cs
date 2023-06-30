@@ -25,7 +25,8 @@ namespace UI
           int nHeightEllipse
 
      );
-        public Form5()
+        private string UserName;
+        public Form5(string username)
         {
             InitializeComponent();
             Region = System.Drawing.Region.FromHrgn(CreateRoundRectRgn(0, 0, Width, Height, 25, 25));
@@ -33,6 +34,7 @@ namespace UI
             pnlNav.Top = btnProfile.Top;
             pnlNav.Left = btnProfile.Left;
             btnProfile.BackColor = Color.FromArgb(32, 178, 170);
+            UserName = username;
         }
 
         private void avatar_Click(object sender, EventArgs e)
@@ -61,7 +63,7 @@ namespace UI
             btnProfile.BackColor = Color.FromArgb(32, 178, 170);
 
             this.PnlFormLoader.Controls.Clear();
-            Profile_Form5 Profile_Form5_Vrb = new Profile_Form5() { Dock = DockStyle.Fill, TopLevel = false, TopMost = true };
+            Profile_Form5 Profile_Form5_Vrb = new Profile_Form5(UserName) { Dock = DockStyle.Fill, TopLevel = false, TopMost = true };
             Profile_Form5_Vrb.FormBorderStyle = FormBorderStyle.None;
             this.PnlFormLoader.Controls.Add(Profile_Form5_Vrb);
             Profile_Form5_Vrb.Show();
