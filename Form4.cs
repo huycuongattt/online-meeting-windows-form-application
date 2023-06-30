@@ -75,6 +75,7 @@ namespace UI
             string str = UserName + " have joined room";
             Send(str);
             UpdateChat(str);
+          
             Thread listener = new Thread(Receive);
             listener.IsBackground = true;
             listener.Start();
