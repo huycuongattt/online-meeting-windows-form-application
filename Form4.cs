@@ -48,7 +48,7 @@ namespace UI
         void Connect()
         {
             //IP: server address
-            int Port = Int32.Parse("9090");
+            int Port = Int32.Parse("7070");
             IP = new IPEndPoint(IPAddress.Parse("34.126.84.167"), Port);
             Client = new Socket(AddressFamily.InterNetwork, SocketType.Stream, ProtocolType.IP);
 
