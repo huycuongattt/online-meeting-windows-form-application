@@ -54,7 +54,7 @@ namespace UI
         void Connect()
         {
             //IP: server address
-            int Port = Int32.Parse("7070");
+            int Port = Int32.Parse("9090");
             IP = new IPEndPoint(IPAddress.Parse("34.126.84.167"), Port);
             Client = new Socket(AddressFamily.InterNetwork, SocketType.Stream, ProtocolType.IP);
 
@@ -69,7 +69,7 @@ namespace UI
                 Environment.Exit(0);
                 return;
             }
-
+            Send(UserName + " have joined room");
             Thread listener = new Thread(Receive);
             listener.IsBackground = true;
             listener.Start();
@@ -78,7 +78,7 @@ namespace UI
 
         void Send(string str)
         {
-            Client.Send(Serialize(str));
+            Client.Send(Serialize(ID+str));
         }
         void Receive()
         {
@@ -90,8 +90,12 @@ namespace UI
                     Client.Receive(data);
 
                     string y = (string)Deserialize(data);
-                    if (y.Contains("<E>")) ViewScreenSharing(y); 
-                    else UpdateChat(y);
+                    if (y.Contains(ID))
+                    {
+                        y = y.Replace(ID, "");
+                        if (y.Contains("<E>")) ViewScreenSharing(y);
+                        else UpdateChat(y);
+                    }
                 }
             }
             catch (Exception ex)
@@ -207,7 +211,7 @@ namespace UI
             }
             else
             {
-                isShareScreen = true;
+                isShareScreen = true;isShareScreen = true;
 
                 if (x == null)
                 {
@@ -244,6 +248,15 @@ namespace UI
 
         private void guna2PictureBox12_Click(object sender, EventArgs e)
         {
+            if (isShareScreen)
+            {
+                isShareScreen = false;
+                guna2HtmlLabel6.Text = "On";
+                x.Close();
+                x = null;
+            }
+
+            Send(UserName + " left room");
             Client.Close();
             //Client.Disconnect(true);
             this.Close();
@@ -259,6 +272,7 @@ namespace UI
         {
                 string message = $"{UserName}: {Message.Text}";
                 UpdateChat(message);
+                message = $"{ID}{UserName}: {Message.Text}";
                 Client.Send(Serialize(message));
                 Message.Clear();
         }
