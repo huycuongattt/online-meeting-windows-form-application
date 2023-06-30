@@ -21,9 +21,11 @@ namespace UI
     public partial class Form8 : Form
     {
         public string IDRoom = "";
-        public Form8()
+        private string UserName;
+        public Form8(string username)
         {
             InitializeComponent();
+            UserName = username;    
         }
         IFirebaseConfig config = new FirebaseConfig
         {
@@ -56,9 +58,7 @@ namespace UI
         private async void BtnJoin_Click(object sender, EventArgs e)
         {
             if (guna2ComboBox1.Text == "Public room")
-            {
-                var form1 = (Form1)Application.OpenForms["Form1"];
-                string UserName = form1.UserName;
+            { 
                 DateTime Now = DateTime.Now;
                 Random random = new Random();
                 IDRoom = (random.Next(1024, 65535)).ToString();
@@ -82,8 +82,6 @@ namespace UI
             }
             else
             {
-                var form1 = (Form1)Application.OpenForms["Form1"];
-                string UserName = form1.UserName;
                 Random random = new Random();
                 DateTime Now = DateTime.Now;
                 IDRoom = (random.Next(1024, 65535)).ToString();

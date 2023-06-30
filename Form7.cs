@@ -19,10 +19,12 @@ namespace UI
     {
         public bool Camera = true;
         public bool Microphone = true;
-        public Form7()
+        private string UserName;
+        public Form7(string username)
         {
             InitializeComponent();
             TextBoxPassword.PasswordChar = '*';
+            UserName = username;
         }
 
         IFirebaseConfig config = new FirebaseConfig
@@ -130,8 +132,6 @@ namespace UI
                                 if (TextID.Text.Trim() == ID_Room && HashPassword(TextBoxPassword.Text.Trim()) == Pass_room)
                                 {
                                     enter2 = true;
-                                    var form1 = (Form1)Application.OpenForms["Form1"];
-                                    string UserName = form1.UserName;
                                     Random random = new Random();
                                     DateTime Now = DateTime.Now;
                                     string IDAttend = (random.Next(1, 99999)).ToString();
@@ -147,7 +147,7 @@ namespace UI
                                     Enter_Room attend = response2.ResultAs<Enter_Room>();
                                     MessageBox.Show("Join room successfully!", "Notification", MessageBoxButtons.OK);
                                     this.Hide();
-                                    Form4 f4 = new Form4(UserName, ID_Room, TextBoxPassword.Text.Trim(), HostName);
+                                    Form4 f4 = new Form4(UserName, ID_Room, TextBoxPassword.Text.Trim(), UserName);
                                     f4.ShowDialog();
                                 }
 

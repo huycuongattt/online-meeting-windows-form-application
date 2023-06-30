@@ -49,7 +49,7 @@ namespace UI
             btnHome.BackColor = Color.FromArgb(32, 178, 170);
 
             this.PnlFormLoader.Controls.Clear();
-            Home_Form5 Home_Form5_Vrb = new Home_Form5() { Dock = DockStyle.Fill, TopLevel = false, TopMost = true };
+            Home_Form5 Home_Form5_Vrb = new Home_Form5(UserName) { Dock = DockStyle.Fill, TopLevel = false, TopMost = true };
             Home_Form5_Vrb.FormBorderStyle = FormBorderStyle.None;
             this.PnlFormLoader.Controls.Add(Home_Form5_Vrb);
             Home_Form5_Vrb.Show();

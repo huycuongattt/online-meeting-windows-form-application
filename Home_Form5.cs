@@ -12,20 +12,22 @@ namespace UI
 {
     public partial class Home_Form5 : Form
     {
-        public Home_Form5()
+        private string UserName;
+        public Home_Form5(string userName)
         {
             InitializeComponent();
+            UserName = userName;    
         }
 
         private void btnJoin_Click(object sender, EventArgs e)
         {
-            Form7 form7 = new Form7();
+            Form7 form7 = new Form7(UserName);
             form7.ShowDialog();
         }
 
         private void btnNewMeeting_Click(object sender, EventArgs e)
         {
-            Form8 form8 = new Form8();
+            Form8 form8 = new Form8(UserName);
             form8.ShowDialog();
         }
     }
