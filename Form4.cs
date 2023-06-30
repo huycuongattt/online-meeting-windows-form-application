@@ -13,6 +13,7 @@ using System.Windows.Forms;
 using System.Threading;
 using System.IO;
 using System.Runtime.Serialization.Formatters.Binary;
+using Newtonsoft.Json;
 
 namespace UI
 {
@@ -37,8 +38,8 @@ namespace UI
         void Connect()
         {
             //IP: server address
-            int Port = Int32.Parse("9900");
-            IP = new IPEndPoint(IPAddress.Parse("192.168.1.26"), Port);
+            int Port = Int32.Parse("9090");
+            IP = new IPEndPoint(IPAddress.Parse("34.126.84.167"), Port);
             Client = new Socket(AddressFamily.InterNetwork, SocketType.Stream, ProtocolType.IP);
 
             try
@@ -83,7 +84,20 @@ namespace UI
             }
         }
 
-        byte[] Serialize(object obj)
+
+        static byte[] Serialize(object obj)
+        {
+            string json = JsonConvert.SerializeObject(obj);
+            return Encoding.UTF8.GetBytes(json);
+        }
+
+        static object Deserialize(byte[] data)
+        {
+            string json = Encoding.UTF8.GetString(data);
+            return JsonConvert.DeserializeObject(json);
+        }
+
+        /*byte[] Serialize(object obj)
         {
             MemoryStream stream = new MemoryStream();
             BinaryFormatter formatterr = new BinaryFormatter();
@@ -96,7 +110,7 @@ namespace UI
             BinaryFormatter formatterr = new BinaryFormatter();
 
             return formatterr.Deserialize(stream);
-        }
+        }*/
 
         private void guna2PictureBox5_Click(object sender, EventArgs e)
         {
@@ -171,7 +185,7 @@ namespace UI
             if (isShareScreen)
             {
                 isShareScreen = false;
-
+                guna2HtmlLabel6.Text = "Off";
                 x.Close();
                 x = null;
             }
@@ -179,12 +193,24 @@ namespace UI
             {
                 isShareScreen = true;
 
-                x.OnAttendeeConnected += Incoming;
-                x.Open();
+                if (x == null)
+                {
+                    x = new RDPSession();
+                    x.OnAttendeeConnected += Incoming;
+                    x.Open();
+                }
+                else
+                {
+                    x.OnAttendeeConnected += Incoming;
+                    x.Open();
+                }
+
                 IRDPSRAPIInvitation Invitation = x.Invitations.CreateInvitation("Trial", "MyGroup", "", 10);
 
                 string connectStr = Invitation.ConnectionString;
                 Send(connectStr);
+
+                guna2HtmlLabel6.Text = "On";
             }
         }
 
@@ -202,8 +228,10 @@ namespace UI
 
         private void guna2PictureBox12_Click(object sender, EventArgs e)
         {
-            Client.Disconnect(true);
+            Client.Close();
+            //Client.Disconnect(true);
             this.Close();
+            
         }
     }
 }

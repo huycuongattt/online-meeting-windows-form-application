@@ -203,7 +203,6 @@
             // 
             // guna2Separator1
             // 
-            this.guna2Separator1.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.guna2Separator1.Location = new System.Drawing.Point(109, 36);
             this.guna2Separator1.Name = "guna2Separator1";
             this.guna2Separator1.Size = new System.Drawing.Size(761, 12);
@@ -211,7 +210,6 @@
             // 
             // guna2HtmlLabel1
             // 
-            this.guna2HtmlLabel1.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.guna2HtmlLabel1.BackColor = System.Drawing.Color.Transparent;
             this.guna2HtmlLabel1.Font = new System.Drawing.Font("Nirmala UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.guna2HtmlLabel1.ForeColor = System.Drawing.Color.LightSeaGreen;
@@ -235,7 +233,6 @@
             // 
             // guna2HtmlLabel3
             // 
-            this.guna2HtmlLabel3.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.guna2HtmlLabel3.BackColor = System.Drawing.Color.Transparent;
             this.guna2HtmlLabel3.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.guna2HtmlLabel3.ForeColor = System.Drawing.Color.LightSeaGreen;
@@ -278,11 +275,11 @@
             this.guna2HtmlLabel6.BackColor = System.Drawing.Color.Transparent;
             this.guna2HtmlLabel6.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.guna2HtmlLabel6.ForeColor = System.Drawing.Color.LightSeaGreen;
-            this.guna2HtmlLabel6.Location = new System.Drawing.Point(631, 779);
+            this.guna2HtmlLabel6.Location = new System.Drawing.Point(654, 776);
             this.guna2HtmlLabel6.Name = "guna2HtmlLabel6";
-            this.guna2HtmlLabel6.Size = new System.Drawing.Size(85, 18);
+            this.guna2HtmlLabel6.Size = new System.Drawing.Size(19, 18);
             this.guna2HtmlLabel6.TabIndex = 22;
-            this.guna2HtmlLabel6.Text = "Share Screen        ";
+            this.guna2HtmlLabel6.Text = "Off      ";
             this.guna2HtmlLabel6.TextAlignment = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // guna2HtmlLabel7
@@ -695,7 +692,6 @@
             // 
             // guna2PictureBox7
             // 
-            this.guna2PictureBox7.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.guna2PictureBox7.BackColor = System.Drawing.Color.Transparent;
             this.guna2PictureBox7.Image = ((System.Drawing.Image)(resources.GetObject("guna2PictureBox7.Image")));
             this.guna2PictureBox7.ImageRotate = 0F;
