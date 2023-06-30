@@ -22,19 +22,25 @@ namespace UI
         IPEndPoint IP;
         Socket Client;
         private string UserName;
+        private string ID;
+        private string Pass;
         RDPSession x = new RDPSession();
 
 
         bool isShareScreen = false;
-        public Form4(string username)
+        public Form4(string username, string id, string pass)
         {
             InitializeComponent();
             UserName = username;
+            ID = id;
+            Pass = pass;
         }
 
         private void Form4_Load(object sender, EventArgs e)
         {
             Connect();
+            ID_Room.Text = ID;
+            Pass_Room.Text = Pass;
         }
 
         private void UpdateChat(string message)
@@ -49,7 +55,7 @@ namespace UI
         {
             //IP: server address
             int Port = Int32.Parse("9090");
-            IP = new IPEndPoint(IPAddress.Parse("192.168.1.26"), Port);
+            IP = new IPEndPoint(IPAddress.Parse("34.126.84.167"), Port);
             Client = new Socket(AddressFamily.InterNetwork, SocketType.Stream, ProtocolType.IP);
 
             try

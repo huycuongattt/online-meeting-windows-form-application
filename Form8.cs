@@ -61,7 +61,7 @@ namespace UI
                 string UserName = form1.UserName;
                 DateTime Now = DateTime.Now;
                 Random random = new Random();
-                IDRoom = (random.Next(10000, 99999)).ToString();
+                IDRoom = (random.Next(1024, 65535)).ToString();
                 IDRoom = await CheckID(IDRoom);
                 var Enter = new Enter_Room
                 {
@@ -75,7 +75,10 @@ namespace UI
                 };
                 SetResponse response = await client.SetAsync("Room/" + guna2TextBox7.Text, Enter);
                 Enter_Room go = response.ResultAs<Enter_Room>();
-                MessageBox.Show("Register successfully!", "Notification", MessageBoxButtons.OK);
+                MessageBox.Show("Register successfully! ID Room is" + IDRoom, "Notification", MessageBoxButtons.OK);
+                this.Hide();
+                Form4 f4 = new Form4(UserName, IDRoom, "N/A");
+                f4.ShowDialog();
             }
             else
             {
@@ -83,7 +86,7 @@ namespace UI
                 string UserName = form1.UserName;
                 Random random = new Random();
                 DateTime Now = DateTime.Now;
-                IDRoom = (random.Next(10000, 99999)).ToString();
+                IDRoom = (random.Next(1024, 65535)).ToString();
                 IDRoom = await CheckID(IDRoom);
 
                 string non_hashPass_Room = CreatePassword();
@@ -99,7 +102,10 @@ namespace UI
                 };
                 SetResponse response = await client.SetAsync("Room/" + guna2TextBox7.Text, Enter);
                 Enter_Room go = response.ResultAs<Enter_Room>();
-                MessageBox.Show("Register successfully!", "Notification", MessageBoxButtons.OK);
+                MessageBox.Show("Register successfully! \n ID Room is " + IDRoom + "\n Pass Room is " + non_hashPass_Room, "Notification", MessageBoxButtons.OK);
+                this.Hide();
+                Form4 f4 = new Form4(UserName, IDRoom, non_hashPass_Room);
+                f4.ShowDialog();
             }
 
         }
